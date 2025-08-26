@@ -3,7 +3,7 @@
     public class Member
     {
         public int Id {  get; set; }
-        public int MemberNumber { get; set; }
+        public int Nr { get; set; }
         public string Vorname { get; set; } = string.Empty;   
         public string Nachname { get; set; } = string.Empty;
         public string Titel { get; set; } = string.Empty;

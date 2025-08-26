@@ -17,7 +17,7 @@ namespace DartVerwaltung
             _member = member;
             txtMemberVorname.Text = _member.Vorname;
             txtMemberNachname.Text = _member.Nachname;
-            txtMemberNummer.Text = _member.MemberNumber.ToString();
+            txtMemberNummer.Text = _member.Nr.ToString();
             txtMemberTitel.Text = _member.Titel;
             txtMemberStand.Text = _member.Familienstand;
             dtpGeburtstag.Value = _member.Geburtstag;
@@ -35,7 +35,7 @@ namespace DartVerwaltung
 
             _member.Vorname = txtMemberVorname.Text;
             _member.Nachname = txtMemberNachname.Text;
-            _member.MemberNumber = Convert.ToInt32(txtMemberNummer.Text);
+            _member.Nr = Convert.ToInt32(txtMemberNummer.Text);
             _member.Titel = txtMemberTitel.Text;
             _member.Familienstand = txtMemberStand.Text;
             _member.Geburtstag = dtpGeburtstag.Value;

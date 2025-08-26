@@ -467,6 +467,7 @@
             // 
             // dgMemberListe
             // 
+            dgMemberListe.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
             dgMemberListe.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgMemberListe.Location = new Point(12, 41);
             dgMemberListe.Name = "dgMemberListe";
