@@ -15,6 +15,7 @@ namespace DartVerwaltung
             // Test, lädt die Database als Dataset(source)
             _dataContext.Members.Load<Member>();
             dgMemberListe.DataSource = _dataContext.Members.Local.ToBindingList();
+
             // Entfernt das angegebene Column
             dgMemberListe.Columns["Id"].Visible = false;
             dgMemberListe.Columns["Beruf"].Visible = false;
@@ -51,6 +52,21 @@ namespace DartVerwaltung
         {
             frmMitgliederliste frmMitgliederliste = new frmMitgliederliste();
             frmMitgliederliste.ShowDialog();
+        }
+
+        private void btnStartseiteBearbeiten_Click(object sender, EventArgs e)
+        {
+            DataGridViewSelectedRowCollection rows = dgMemberListe.SelectedRows;
+            if(rows == null || rows.Count != 1)
+            {
+                return;
+            }
+
+            DataGridViewRow firstRow = rows[0];
+            if(!(firstRow.DataBoundItem is Member selectedMember))
+            {
+                return;
+            }
         }
     }
 }

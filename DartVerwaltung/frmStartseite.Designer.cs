@@ -95,6 +95,7 @@
             btnStartseiteBearbeiten.TabIndex = 1;
             btnStartseiteBearbeiten.Text = "Bearbeiten";
             btnStartseiteBearbeiten.UseVisualStyleBackColor = true;
+            btnStartseiteBearbeiten.Click += btnStartseiteBearbeiten_Click;
             // 
             // btnStartseiteLoeschen
             // 
