@@ -6,6 +6,7 @@ namespace DartVerwaltung
 {
     public partial class frmStartseite : Form
     {
+        // EF Core Datenbank verwaltet die Operationen
         private DataContext _dataContext = new DataContext();
 
         public frmStartseite()
@@ -17,27 +18,29 @@ namespace DartVerwaltung
             dgMemberListe.DataSource = _dataContext.Members.Local.ToBindingList();
 
             // Entfernt das angegebene Column
-            dgMemberListe.Columns["Id"].Visible = false;
-            dgMemberListe.Columns["Beruf"].Visible = false;
-            dgMemberListe.Columns["Eintrittsdatum"].Visible = false;
-            dgMemberListe.Columns["Austrittsdatum"].Visible = false;
-            dgMemberListe.Columns["Familienstand"].Visible = false;
-            dgMemberListe.Columns["Geburtstag"].Visible = false;
-            dgMemberListe.Columns["Informationen"].Visible = false;
-            dgMemberListe.Columns["Profilbild"].Visible = false;
-            dgMemberListe.Columns["Profilbild"].Visible = false;
-            dgMemberListe.Columns["Profilbild"].Visible = false;
+            // dgMemberListe.Columns["Id"].Visible = false;
+            // dgMemberListe.Columns["Beruf"].Visible = false;
+            // dgMemberListe.Columns["Eintrittsdatum"].Visible = false;
+            // dgMemberListe.Columns["Austrittsdatum"].Visible = false;
+            // dgMemberListe.Columns["Familienstand"].Visible = false;
+            // dgMemberListe.Columns["Geburtstag"].Visible = false;
+            // dgMemberListe.Columns["Informationen"].Visible = false;
+            // dgMemberListe.Columns["Profilbild"].Visible = false;
+            // dgMemberListe.Columns["Profilbild"].Visible = false;
+            // dgMemberListe.Columns["Profilbild"].Visible = false;
         }
 
         private void Startseite_Shown(object sender, EventArgs e)
         {
+            // Erstellt eine Liste aller Mitglieder in der Datenbank
             List<Member> memberList = _dataContext.Members.ToList();
-
         }
 
         private void btnStartseiteHinzufuegen_Click(object sender, EventArgs e)
         {
             frmUserVerwaltung frmUserVerwaltung = new frmUserVerwaltung();
+
+            // Memr Objekt wird erstellt und an das Formular übergeben
             Member newMember = new Member();
 
             DialogResult result = frmUserVerwaltung.ShowAsDialog(newMember);
@@ -50,8 +53,9 @@ namespace DartVerwaltung
 
         private void btnStartseiteAnzeigen_Click(object sender, EventArgs e)
         {
-            frmMitgliederliste frmMitgliederliste = new frmMitgliederliste();
-            frmMitgliederliste.ShowDialog();
+            // Öffnet das Formular zur Statistik
+            frmClubStatistik frmClubStatistiken = new frmClubStatistik();
+            frmClubStatistiken.ShowDialog();
         }
 
         private void btnStartseiteBearbeiten_Click(object sender, EventArgs e)

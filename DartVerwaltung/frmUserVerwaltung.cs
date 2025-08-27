@@ -4,7 +4,7 @@ namespace DartVerwaltung
 {
     public partial class frmUserVerwaltung : Form
     {
-        private Member _member;
+        private Member? _member;
 
 
         public frmUserVerwaltung()
@@ -14,6 +14,7 @@ namespace DartVerwaltung
 
         public DialogResult ShowAsDialog(Member member)
         {
+            // Member Objekt wird dem Formular zugewiesen
             _member = member;
             txtMemberVorname.Text = _member.Vorname;
             txtMemberNachname.Text = _member.Nachname;
@@ -27,12 +28,14 @@ namespace DartVerwaltung
             txtMemberBeruf.Text = _member.Beruf;
             txtMemberInfo.Text = _member.Informationen;
 
+            // Zeigt das Formular als modalen Dialog an
             DialogResult result = ShowDialog();
             if (result != DialogResult.OK)
             {
                 return DialogResult.Cancel;
             }
 
+            // Aktualisiert die Member-Eigenschaften mit den Werten aus den Textboxen
             _member.Vorname = txtMemberVorname.Text;
             _member.Nachname = txtMemberNachname.Text;
             _member.Nr = Convert.ToInt32(txtMemberNummer.Text);
@@ -44,11 +47,13 @@ namespace DartVerwaltung
             _member.Beruf = txtMemberBeruf.Text;
             _member.Informationen = txtMemberInfo.Text;
 
+            // Gibt an, dass der Dialog mit OK beendet wurde
             return DialogResult.OK;
         }
 
         private string GetAgeByBirthday(DateTime geburtstag)
         {
+            // Berechnet das Alter basierend auf dem Geburtstag
             DateTime currentDate = DateTime.Now;
             int age = currentDate.Year - geburtstag.Year;
             if (currentDate.Month < geburtstag.Month)
@@ -66,11 +71,13 @@ namespace DartVerwaltung
             return age.ToString();
         }
 
+        // Speichert oder bestätigt die Änderungen
         private void btnMemberSpeichern_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
         }
 
+        // Cancelt die Änderungen
         private void btnMemberCancel_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;

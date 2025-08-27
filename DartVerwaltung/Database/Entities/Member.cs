@@ -1,5 +1,6 @@
 ﻿namespace DartVerwaltung.Database.Entities
 {
+    // Definiert die Member-Klasse, die eine Entität in der Datenbank darstellt
     public class Member
     {
         public int Id {  get; set; }
