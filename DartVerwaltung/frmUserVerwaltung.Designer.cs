@@ -46,8 +46,8 @@
             txtMemberNummer = new TextBox();
             txtMemberInfo = new RichTextBox();
             label11 = new Label();
-            txtMemberBLaden = new Button();
-            txtMemberBLoeschen = new Button();
+            btnMemberBLaden = new Button();
+            btnMemberBLoeschen = new Button();
             btnMemberCancel = new Button();
             btnMemberSpeichern = new Button();
             dtpGeburtstag = new DateTimePicker();
@@ -100,6 +100,7 @@
             pcMember.Location = new Point(77, 64);
             pcMember.Name = "pcMember";
             pcMember.Size = new Size(150, 181);
+            pcMember.SizeMode = PictureBoxSizeMode.CenterImage;
             pcMember.TabIndex = 13;
             pcMember.TabStop = false;
             // 
@@ -214,23 +215,25 @@
             label11.TabIndex = 39;
             label11.Text = "Informationen";
             // 
-            // txtMemberBLaden
+            // btnMemberBLaden
             // 
-            txtMemberBLaden.Location = new Point(77, 251);
-            txtMemberBLaden.Name = "txtMemberBLaden";
-            txtMemberBLaden.Size = new Size(60, 25);
-            txtMemberBLaden.TabIndex = 40;
-            txtMemberBLaden.Text = "Laden";
-            txtMemberBLaden.UseVisualStyleBackColor = true;
+            btnMemberBLaden.Location = new Point(77, 251);
+            btnMemberBLaden.Name = "btnMemberBLaden";
+            btnMemberBLaden.Size = new Size(60, 25);
+            btnMemberBLaden.TabIndex = 40;
+            btnMemberBLaden.Text = "Laden";
+            btnMemberBLaden.UseVisualStyleBackColor = true;
+            btnMemberBLaden.Click += btnMemberBLaden_Click;
             // 
-            // txtMemberBLoeschen
+            // btnMemberBLoeschen
             // 
-            txtMemberBLoeschen.Location = new Point(167, 251);
-            txtMemberBLoeschen.Name = "txtMemberBLoeschen";
-            txtMemberBLoeschen.Size = new Size(60, 25);
-            txtMemberBLoeschen.TabIndex = 41;
-            txtMemberBLoeschen.Text = "Löschen";
-            txtMemberBLoeschen.UseVisualStyleBackColor = true;
+            btnMemberBLoeschen.Location = new Point(167, 251);
+            btnMemberBLoeschen.Name = "btnMemberBLoeschen";
+            btnMemberBLoeschen.Size = new Size(60, 25);
+            btnMemberBLoeschen.TabIndex = 41;
+            btnMemberBLoeschen.Text = "Löschen";
+            btnMemberBLoeschen.UseVisualStyleBackColor = true;
+            btnMemberBLoeschen.Click += btnMemberBLoeschen_Click;
             // 
             // btnMemberCancel
             // 
@@ -255,7 +258,8 @@
             // dtpGeburtstag
             // 
             dtpGeburtstag.Format = DateTimePickerFormat.Short;
-            dtpGeburtstag.Location = new Point(338, 170);
+            dtpGeburtstag.Location = new Point(338, 164);
+            dtpGeburtstag.MinDate = new DateTime(1900, 1, 1, 0, 0, 0, 0);
             dtpGeburtstag.Name = "dtpGeburtstag";
             dtpGeburtstag.Size = new Size(100, 23);
             dtpGeburtstag.TabIndex = 44;
@@ -264,6 +268,7 @@
             // 
             dtpEintritt.Format = DateTimePickerFormat.Short;
             dtpEintritt.Location = new Point(338, 193);
+            dtpEintritt.MinDate = new DateTime(1900, 1, 1, 0, 0, 0, 0);
             dtpEintritt.Name = "dtpEintritt";
             dtpEintritt.Size = new Size(100, 23);
             dtpEintritt.TabIndex = 45;
@@ -271,7 +276,8 @@
             // dtpAustritt
             // 
             dtpAustritt.Format = DateTimePickerFormat.Short;
-            dtpAustritt.Location = new Point(582, 190);
+            dtpAustritt.Location = new Point(582, 193);
+            dtpAustritt.MinDate = new DateTime(1900, 1, 1, 0, 0, 0, 0);
             dtpAustritt.Name = "dtpAustritt";
             dtpAustritt.Size = new Size(100, 23);
             dtpAustritt.TabIndex = 46;
@@ -298,15 +304,15 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(txtMemberInfo);
             Controls.Add(dtpAustritt);
             Controls.Add(dtpEintritt);
             Controls.Add(dtpGeburtstag);
             Controls.Add(btnMemberSpeichern);
             Controls.Add(btnMemberCancel);
-            Controls.Add(txtMemberBLoeschen);
-            Controls.Add(txtMemberBLaden);
+            Controls.Add(btnMemberBLoeschen);
+            Controls.Add(btnMemberBLaden);
             Controls.Add(label11);
-            Controls.Add(txtMemberInfo);
             Controls.Add(txtMemberNummer);
             Controls.Add(txtMemberBeruf);
             Controls.Add(txtMemberAlter);
@@ -352,8 +358,8 @@
         private TextBox txtMemberNummer;
         private RichTextBox txtMemberInfo;
         private Label label11;
-        private Button txtMemberBLaden;
-        private Button txtMemberBLoeschen;
+        private Button btnMemberBLaden;
+        private Button btnMemberBLoeschen;
         private Button btnMemberCancel;
         private Button btnMemberSpeichern;
         private DateTimePicker dtpGeburtstag;

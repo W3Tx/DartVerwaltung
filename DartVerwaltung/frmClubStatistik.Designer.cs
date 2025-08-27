@@ -73,7 +73,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(12, 394);
+            button1.Location = new Point(16, 279);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 87;
@@ -82,7 +82,7 @@
             // 
             // button19
             // 
-            button19.Location = new Point(428, 352);
+            button19.Location = new Point(432, 237);
             button19.Name = "button19";
             button19.Size = new Size(23, 23);
             button19.TabIndex = 86;
@@ -91,7 +91,7 @@
             // 
             // button20
             // 
-            button20.Location = new Point(428, 323);
+            button20.Location = new Point(432, 208);
             button20.Name = "button20";
             button20.Size = new Size(23, 23);
             button20.TabIndex = 85;
@@ -100,7 +100,7 @@
             // 
             // button21
             // 
-            button21.Location = new Point(428, 294);
+            button21.Location = new Point(432, 179);
             button21.Name = "button21";
             button21.Size = new Size(23, 23);
             button21.TabIndex = 84;
@@ -109,7 +109,7 @@
             // 
             // button22
             // 
-            button22.Location = new Point(428, 264);
+            button22.Location = new Point(432, 149);
             button22.Name = "button22";
             button22.Size = new Size(23, 23);
             button22.TabIndex = 83;
@@ -118,7 +118,7 @@
             // 
             // button23
             // 
-            button23.Location = new Point(428, 235);
+            button23.Location = new Point(432, 120);
             button23.Name = "button23";
             button23.Size = new Size(23, 23);
             button23.TabIndex = 82;
@@ -127,7 +127,7 @@
             // 
             // button14
             // 
-            button14.Location = new Point(245, 352);
+            button14.Location = new Point(249, 237);
             button14.Name = "button14";
             button14.Size = new Size(23, 23);
             button14.TabIndex = 81;
@@ -136,7 +136,7 @@
             // 
             // button15
             // 
-            button15.Location = new Point(245, 323);
+            button15.Location = new Point(249, 208);
             button15.Name = "button15";
             button15.Size = new Size(23, 23);
             button15.TabIndex = 80;
@@ -145,7 +145,7 @@
             // 
             // button16
             // 
-            button16.Location = new Point(245, 294);
+            button16.Location = new Point(249, 179);
             button16.Name = "button16";
             button16.Size = new Size(23, 23);
             button16.TabIndex = 79;
@@ -154,7 +154,7 @@
             // 
             // button17
             // 
-            button17.Location = new Point(245, 264);
+            button17.Location = new Point(249, 149);
             button17.Name = "button17";
             button17.Size = new Size(23, 23);
             button17.TabIndex = 78;
@@ -163,7 +163,7 @@
             // 
             // button18
             // 
-            button18.Location = new Point(245, 235);
+            button18.Location = new Point(249, 120);
             button18.Name = "button18";
             button18.Size = new Size(23, 23);
             button18.TabIndex = 77;
@@ -172,7 +172,7 @@
             // 
             // button9
             // 
-            button9.Location = new Point(293, 351);
+            button9.Location = new Point(297, 236);
             button9.Name = "button9";
             button9.Size = new Size(23, 23);
             button9.TabIndex = 76;
@@ -181,7 +181,7 @@
             // 
             // button10
             // 
-            button10.Location = new Point(293, 322);
+            button10.Location = new Point(297, 207);
             button10.Name = "button10";
             button10.Size = new Size(23, 23);
             button10.TabIndex = 75;
@@ -190,7 +190,7 @@
             // 
             // button11
             // 
-            button11.Location = new Point(293, 293);
+            button11.Location = new Point(297, 178);
             button11.Name = "button11";
             button11.Size = new Size(23, 23);
             button11.TabIndex = 74;
@@ -199,7 +199,7 @@
             // 
             // button12
             // 
-            button12.Location = new Point(293, 263);
+            button12.Location = new Point(297, 148);
             button12.Name = "button12";
             button12.Size = new Size(23, 23);
             button12.TabIndex = 73;
@@ -208,7 +208,7 @@
             // 
             // button13
             // 
-            button13.Location = new Point(293, 234);
+            button13.Location = new Point(297, 119);
             button13.Name = "button13";
             button13.Size = new Size(23, 23);
             button13.TabIndex = 72;
@@ -217,7 +217,7 @@
             // 
             // button8
             // 
-            button8.Location = new Point(110, 352);
+            button8.Location = new Point(114, 237);
             button8.Name = "button8";
             button8.Size = new Size(23, 23);
             button8.TabIndex = 71;
@@ -226,7 +226,7 @@
             // 
             // button7
             // 
-            button7.Location = new Point(110, 323);
+            button7.Location = new Point(114, 208);
             button7.Name = "button7";
             button7.Size = new Size(23, 23);
             button7.TabIndex = 70;
@@ -235,7 +235,7 @@
             // 
             // button6
             // 
-            button6.Location = new Point(110, 294);
+            button6.Location = new Point(114, 179);
             button6.Name = "button6";
             button6.Size = new Size(23, 23);
             button6.TabIndex = 69;
@@ -244,7 +244,7 @@
             // 
             // button5
             // 
-            button5.Location = new Point(110, 264);
+            button5.Location = new Point(114, 149);
             button5.Name = "button5";
             button5.Size = new Size(23, 23);
             button5.TabIndex = 68;
@@ -253,7 +253,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(110, 235);
+            button4.Location = new Point(114, 120);
             button4.Name = "button4";
             button4.Size = new Size(23, 23);
             button4.TabIndex = 67;
@@ -271,7 +271,7 @@
             // 
             // btnStartseiteSpeichern
             // 
-            btnStartseiteSpeichern.Location = new Point(110, 394);
+            btnStartseiteSpeichern.Location = new Point(114, 279);
             btnStartseiteSpeichern.Name = "btnStartseiteSpeichern";
             btnStartseiteSpeichern.Size = new Size(341, 23);
             btnStartseiteSpeichern.TabIndex = 65;
@@ -281,7 +281,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(350, 217);
+            label8.Location = new Point(354, 102);
             label8.Name = "label8";
             label8.Size = new Size(50, 15);
             label8.TabIndex = 64;
@@ -290,7 +290,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(160, 217);
+            label7.Location = new Point(164, 102);
             label7.Name = "label7";
             label7.Size = new Size(61, 15);
             label7.TabIndex = 63;
@@ -298,7 +298,7 @@
             // 
             // txtNameFBullseye
             // 
-            txtNameFBullseye.Location = new Point(322, 352);
+            txtNameFBullseye.Location = new Point(326, 237);
             txtNameFBullseye.Name = "txtNameFBullseye";
             txtNameFBullseye.Size = new Size(100, 23);
             txtNameFBullseye.TabIndex = 62;
@@ -306,7 +306,7 @@
             // 
             // txtNameDBullseye
             // 
-            txtNameDBullseye.Location = new Point(322, 323);
+            txtNameDBullseye.Location = new Point(326, 208);
             txtNameDBullseye.Name = "txtNameDBullseye";
             txtNameDBullseye.Size = new Size(100, 23);
             txtNameDBullseye.TabIndex = 61;
@@ -314,7 +314,7 @@
             // 
             // txtNameCBullseye
             // 
-            txtNameCBullseye.Location = new Point(322, 294);
+            txtNameCBullseye.Location = new Point(326, 179);
             txtNameCBullseye.Name = "txtNameCBullseye";
             txtNameCBullseye.Size = new Size(100, 23);
             txtNameCBullseye.TabIndex = 60;
@@ -322,7 +322,7 @@
             // 
             // txtNameBBullseye
             // 
-            txtNameBBullseye.Location = new Point(322, 264);
+            txtNameBBullseye.Location = new Point(326, 149);
             txtNameBBullseye.Name = "txtNameBBullseye";
             txtNameBBullseye.Size = new Size(100, 23);
             txtNameBBullseye.TabIndex = 59;
@@ -330,7 +330,7 @@
             // 
             // txtNameABullseye
             // 
-            txtNameABullseye.Location = new Point(322, 235);
+            txtNameABullseye.Location = new Point(326, 120);
             txtNameABullseye.Name = "txtNameABullseye";
             txtNameABullseye.Size = new Size(100, 23);
             txtNameABullseye.TabIndex = 58;
@@ -348,7 +348,7 @@
             // 
             // txtNameFTreffer
             // 
-            txtNameFTreffer.Location = new Point(139, 352);
+            txtNameFTreffer.Location = new Point(143, 237);
             txtNameFTreffer.Name = "txtNameFTreffer";
             txtNameFTreffer.Size = new Size(100, 23);
             txtNameFTreffer.TabIndex = 56;
@@ -356,7 +356,7 @@
             // 
             // txtNameDTreffer
             // 
-            txtNameDTreffer.Location = new Point(139, 323);
+            txtNameDTreffer.Location = new Point(143, 208);
             txtNameDTreffer.Name = "txtNameDTreffer";
             txtNameDTreffer.Size = new Size(100, 23);
             txtNameDTreffer.TabIndex = 55;
@@ -364,7 +364,7 @@
             // 
             // txtNameCTreffer
             // 
-            txtNameCTreffer.Location = new Point(139, 294);
+            txtNameCTreffer.Location = new Point(143, 179);
             txtNameCTreffer.Name = "txtNameCTreffer";
             txtNameCTreffer.Size = new Size(100, 23);
             txtNameCTreffer.TabIndex = 54;
@@ -372,7 +372,7 @@
             // 
             // txtNameBTreffer
             // 
-            txtNameBTreffer.Location = new Point(139, 264);
+            txtNameBTreffer.Location = new Point(143, 149);
             txtNameBTreffer.Name = "txtNameBTreffer";
             txtNameBTreffer.Size = new Size(100, 23);
             txtNameBTreffer.TabIndex = 53;
@@ -380,7 +380,7 @@
             // 
             // txtNameATreffer
             // 
-            txtNameATreffer.Location = new Point(139, 235);
+            txtNameATreffer.Location = new Point(143, 120);
             txtNameATreffer.Name = "txtNameATreffer";
             txtNameATreffer.Size = new Size(100, 23);
             txtNameATreffer.TabIndex = 52;
@@ -389,7 +389,7 @@
             // lblStartseiteNameF
             // 
             lblStartseiteNameF.AutoSize = true;
-            lblStartseiteNameF.Location = new Point(12, 355);
+            lblStartseiteNameF.Location = new Point(16, 240);
             lblStartseiteNameF.Name = "lblStartseiteNameF";
             lblStartseiteNameF.Size = new Size(48, 15);
             lblStartseiteNameF.TabIndex = 51;
@@ -398,7 +398,7 @@
             // lblStartseiteNameD
             // 
             lblStartseiteNameD.AutoSize = true;
-            lblStartseiteNameD.Location = new Point(12, 326);
+            lblStartseiteNameD.Location = new Point(16, 211);
             lblStartseiteNameD.Name = "lblStartseiteNameD";
             lblStartseiteNameD.Size = new Size(48, 15);
             lblStartseiteNameD.TabIndex = 50;
@@ -407,7 +407,7 @@
             // lblStartseiteNameC
             // 
             lblStartseiteNameC.AutoSize = true;
-            lblStartseiteNameC.Location = new Point(12, 297);
+            lblStartseiteNameC.Location = new Point(16, 182);
             lblStartseiteNameC.Name = "lblStartseiteNameC";
             lblStartseiteNameC.Size = new Size(48, 15);
             lblStartseiteNameC.TabIndex = 49;
@@ -416,7 +416,7 @@
             // lblStartseiteNameB
             // 
             lblStartseiteNameB.AutoSize = true;
-            lblStartseiteNameB.Location = new Point(12, 267);
+            lblStartseiteNameB.Location = new Point(16, 152);
             lblStartseiteNameB.Name = "lblStartseiteNameB";
             lblStartseiteNameB.Size = new Size(48, 15);
             lblStartseiteNameB.TabIndex = 48;
@@ -425,17 +425,17 @@
             // lblStartseiteNameA
             // 
             lblStartseiteNameA.AutoSize = true;
-            lblStartseiteNameA.Location = new Point(12, 238);
+            lblStartseiteNameA.Location = new Point(16, 123);
             lblStartseiteNameA.Name = "lblStartseiteNameA";
             lblStartseiteNameA.Size = new Size(48, 15);
             lblStartseiteNameA.TabIndex = 47;
             lblStartseiteNameA.Text = "Name 1";
             // 
-            // frmMitgliederliste
+            // frmClubStatistik
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(469, 437);
+            ClientSize = new Size(469, 316);
             Controls.Add(button1);
             Controls.Add(button19);
             Controls.Add(button20);
@@ -477,7 +477,7 @@
             Controls.Add(lblStartseiteNameC);
             Controls.Add(lblStartseiteNameB);
             Controls.Add(lblStartseiteNameA);
-            Name = "frmMitgliederliste";
+            Name = "frmClubStatistik";
             Text = "Club Statistiken";
             ResumeLayout(false);
             PerformLayout();

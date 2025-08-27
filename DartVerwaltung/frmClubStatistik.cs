@@ -4,11 +4,12 @@ namespace DartVerwaltung
 {
     public partial class frmClubStatistik : Form
     {
-        private DataContext _dataContext = new DataContext();
+        private DataContext _dataContext;
 
-        public frmClubStatistik()
+        public frmClubStatistik(DataContext dataContext)
         {
             InitializeComponent();
+            _dataContext = dataContext;
         }
     }
 }
