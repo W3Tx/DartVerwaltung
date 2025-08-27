@@ -1,6 +1,7 @@
 using DartVerwaltung.Database;
 using DartVerwaltung.Database.Entities;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel;
 
 namespace DartVerwaltung
 {
@@ -12,43 +13,38 @@ namespace DartVerwaltung
         public frmStartseite()
         {
             InitializeComponent();
+        }
 
-            // Test, lädt die Database als Dataset(source)
-            _dataContext.Members.Load<Member>();
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            _dataContext.Members.Load();
             dgMemberListe.DataSource = _dataContext.Members.Local.ToBindingList();
+        }
 
-            // Entfernt das angegebene Column
-            // dgMemberListe.Columns["Id"].Visible = false;
-            // dgMemberListe.Columns["Beruf"].Visible = false;
-            // dgMemberListe.Columns["Eintrittsdatum"].Visible = false;
-            // dgMemberListe.Columns["Austrittsdatum"].Visible = false;
-            // dgMemberListe.Columns["Familienstand"].Visible = false;
-            // dgMemberListe.Columns["Geburtstag"].Visible = false;
-            // dgMemberListe.Columns["Informationen"].Visible = false;
-            // dgMemberListe.Columns["Profilbild"].Visible = false;
-            // dgMemberListe.Columns["Profilbild"].Visible = false;
-            // dgMemberListe.Columns["Profilbild"].Visible = false;
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            base.OnClosing(e);
+            _dataContext?.Dispose();
+            _dataContext = null;
         }
 
         private void Startseite_Shown(object sender, EventArgs e)
         {
+            // Fraglich ???
+
             // Erstellt eine Liste aller Mitglieder in der Datenbank
-            List<Member> memberList = _dataContext.Members.ToList();
+            // List<Member> memberList = _dataContext.Members.ToList();
         }
 
         private void btnStartseiteHinzufuegen_Click(object sender, EventArgs e)
         {
             frmUserVerwaltung frmUserVerwaltung = new frmUserVerwaltung();
 
-            // Memr Objekt wird erstellt und an das Formular übergeben
+            // Member Objekt wird erstellt und an das Formular übergeben
             Member newMember = new Member();
 
-            DialogResult result = frmUserVerwaltung.ShowAsDialog(newMember);
-            if (result == DialogResult.OK)
-            {
-                _dataContext.Members.Add(newMember);
-                _dataContext.SaveChanges();
-            }
+            EditMember(newMember);
         }
 
         private void btnStartseiteAnzeigen_Click(object sender, EventArgs e)
@@ -60,16 +56,64 @@ namespace DartVerwaltung
 
         private void btnStartseiteBearbeiten_Click(object sender, EventArgs e)
         {
-            DataGridViewSelectedRowCollection rows = dgMemberListe.SelectedRows;
-            if(rows == null || rows.Count != 1)
+            var test = dgMemberListe.CurrentRow.DataBoundItem;
+            if (test is Member selectedMember)
+            {
+                EditMember(selectedMember);
+            }
+        }
+
+        // TEST!!!
+        // Aktiviert oder deaktiviert den Bearbeiten-Button basierend auf der Auswahl im DataGridView
+        private void dgMemberListe_SelectionChanged(object sender, EventArgs e)
+        {
+            var test = dgMemberListe.CurrentRow.DataBoundItem;
+            if (test is Member selectedMember)
+            {
+                btnStartseiteBearbeiten.Enabled = true;
+            }
+            else
+            {
+                btnStartseiteBearbeiten.Enabled = false;
+            }
+        }
+
+        private void EditMember(Member member)
+        {
+            frmUserVerwaltung frmUserVerwaltung = new frmUserVerwaltung();
+            DialogResult result = frmUserVerwaltung.ShowAsDialog(member);
+            if (result != DialogResult.OK)
             {
                 return;
             }
 
-            DataGridViewRow firstRow = rows[0];
-            if(!(firstRow.DataBoundItem is Member selectedMember))
+            if (member.Id > 0)
+            {
+                _dataContext.Members.Update(member);
+            }
+            else
+            {
+                _dataContext.Members.Add(member);
+            }
+
+            _dataContext.SaveChanges();
+            dgMemberListe.Refresh();
+        }
+
+        private void btnStartseiteLoeschen_Click(object sender, EventArgs e)
+        {
+           
+            if(MessageBox.Show("Wollen Sie den Eintrag wirklich löschen?", "Löschen", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
             {
                 return;
+            }
+
+            var test = dgMemberListe.CurrentRow.DataBoundItem;
+            if (test is Member selectedMember)
+            {
+                _dataContext.Members.Remove(selectedMember);
+                _dataContext.SaveChanges();
+                dgMemberListe.Refresh();
             }
         }
     }
