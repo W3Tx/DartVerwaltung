@@ -1,4 +1,4 @@
-﻿using BCrypt;
+﻿using BCrypt.Net;
 
 namespace DartVerwaltung
 {
@@ -15,64 +15,71 @@ namespace DartVerwaltung
 
         private void btnLoginButton_Click(object sender, EventArgs e)
         {
+            string enteredUsername = txtLoginBenutzername.Text;
+            string enteredPassword = mtxtLoginPasswort.Text;
+
+            /*using (var db = new Database.DataContextLogin())
+            {
+                var user = db.Logins
+                    .FirstOrDefault(u => u.Benutzername == enteredUsername);
+                if (user == null)
+                {
+                    MessageBox.Show("Benutzername oder Passwort ist falsch!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                
+                string passwordHash = user.Passwort;
+                bool isValid = BCrypt.Net.BCrypt.Verify(enteredPassword, passwordHash);
+                
+                if (!isValid)
+                {
+                    MessageBox.Show("Benutzername oder Passwort ist falsch!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                
+            }*/
+
+            // Wenn die Anmeldedaten korrekt sind, öffne das Hauptformular
+            frmStartseite frmStartseiten = new frmStartseite(this);
+            frmStartseiten.Show();
+            this.Hide();
+
             // Einfache Überprüfung der Anmeldedaten der Testbenutzer
             if (txtLoginBenutzername.Text != username || mtxtLoginPasswort.Text != password)
             {
                 MessageBox.Show("Benutzername oder Passwort ist falsch!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else
-            {
-                frmStartseite frmStartseiten = new frmStartseite();
-                frmStartseiten.Show();
-                this.Hide();
-            }
-
-            // Benutzer aus der Datenbank überprüfen
-
-            // Passwort entschlüsseln (optional)
-
-            // Passwort mit BCrypt vergleichen
-
-            // Wenn die Anmeldedaten korrekt sind, öffne das Hauptformular
         }
 
         private void btnLoginRegistry_Click(object sender, EventArgs e)
         {
             using (var db = new Database.DataContextLogin())
             {
-                // Benutzername bereits vergeben
                 var existingUser = db.Logins
                     .FirstOrDefault(u => u.Benutzername == txtLoginBenutzername.Text);
 
-                // Wenn der Benutzername bereits existiert, zeige eine Fehlermeldung an
                 if (existingUser != null)
                 {
                     MessageBox.Show("Der Benutzername ist bereits vergeben!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                // Gesetztes Passwort passen zusammen
                 if (mtxtLoginPasswort.Text != mtxtLoginPasswortConfirm.Text)
                 {
                     MessageBox.Show("Die Passwörter stimmen nicht überein!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                else
-                {
-                    // Passwort verschlüsseln (optional)
-                    // mtxtLoginPasswort.Text = Encode(mtxtLoginPasswort.Text);
 
-                    // Or using BCrypt for hashing
-                    string passwordHash = BCrypt.Net.BCrypt.HashPassword(mtxtLoginPasswort.Text);
-                }
+                // Passwort hashen mit BCrypt
+                string passwordHash = BCrypt.Net.BCrypt.HashPassword(mtxtLoginPasswort.Text);
 
-                // Benutzer eintragen
                 var newUser = new Database.Entities.Login
                 {
                     Benutzername = txtLoginBenutzername.Text,
-                    Passwort = mtxtLoginPasswort.Text,
-                    Rolle = "User" // Standardrolle ist "User"
+                    Passwort = passwordHash,
+                    Rolle = "User"
                 };
 
                 if (string.IsNullOrWhiteSpace(newUser.Benutzername) || string.IsNullOrWhiteSpace(newUser.Passwort))

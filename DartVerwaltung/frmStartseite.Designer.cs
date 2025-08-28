@@ -54,10 +54,6 @@
             btnStartseiteRefresh = new Button();
             btnStartseiteExpo = new Button();
             memberBindingSource4 = new BindingSource(components);
-            label2 = new Label();
-            txtStartseiteMitgliederIDVon = new TextBox();
-            txtStartseiteMitgliederIDBis = new TextBox();
-            label3 = new Label();
             label4 = new Label();
             txtStartseiteName = new TextBox();
             txtStartseiteNachname = new TextBox();
@@ -69,6 +65,10 @@
             label7 = new Label();
             label8 = new Label();
             btnStartseiteSpielen = new Button();
+            dataGridView1 = new DataGridView();
+            memberBindingSource5 = new BindingSource(components);
+            button1 = new Button();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgMemberListe).BeginInit();
             ((System.ComponentModel.ISupportInitialize)memberBindingSource3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)memberBindingSource2).BeginInit();
@@ -76,6 +76,8 @@
             ((System.ComponentModel.ISupportInitialize)memberBindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)memberBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)memberBindingSource4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)memberBindingSource5).BeginInit();
             SuspendLayout();
             // 
             // btnStartseiteBearbeiten
@@ -258,40 +260,6 @@
             // 
             memberBindingSource4.DataSource = typeof(Database.Entities.Member);
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(12, 91);
-            label2.Name = "label2";
-            label2.Size = new Size(56, 15);
-            label2.TabIndex = 55;
-            label2.Text = "Mitgl-Nr.";
-            // 
-            // txtStartseiteMitgliederIDVon
-            // 
-            txtStartseiteMitgliederIDVon.Location = new Point(98, 88);
-            txtStartseiteMitgliederIDVon.Name = "txtStartseiteMitgliederIDVon";
-            txtStartseiteMitgliederIDVon.PlaceholderText = "Von";
-            txtStartseiteMitgliederIDVon.Size = new Size(46, 23);
-            txtStartseiteMitgliederIDVon.TabIndex = 56;
-            // 
-            // txtStartseiteMitgliederIDBis
-            // 
-            txtStartseiteMitgliederIDBis.Location = new Point(168, 88);
-            txtStartseiteMitgliederIDBis.Name = "txtStartseiteMitgliederIDBis";
-            txtStartseiteMitgliederIDBis.PlaceholderText = "Bis";
-            txtStartseiteMitgliederIDBis.Size = new Size(46, 23);
-            txtStartseiteMitgliederIDBis.TabIndex = 57;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(150, 91);
-            label3.Name = "label3";
-            label3.Size = new Size(12, 15);
-            label3.TabIndex = 58;
-            label3.Text = "-";
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -307,8 +275,8 @@
             txtStartseiteName.Name = "txtStartseiteName";
             txtStartseiteName.PlaceholderText = "Vorname";
             txtStartseiteName.Size = new Size(116, 23);
-            txtStartseiteName.TabIndex = 60;
-            txtStartseiteName.TextChanged += txtStartseiteName_TextChanged;
+            txtStartseiteName.TabIndex = 2;
+            txtStartseiteName.TextChanged += filterInput_Changed;
             // 
             // txtStartseiteNachname
             // 
@@ -316,26 +284,26 @@
             txtStartseiteNachname.Name = "txtStartseiteNachname";
             txtStartseiteNachname.PlaceholderText = "Nachname";
             txtStartseiteNachname.Size = new Size(116, 23);
-            txtStartseiteNachname.TabIndex = 62;
-            txtStartseiteNachname.TextChanged += txtStartseiteNachname_TextChanged;
+            txtStartseiteNachname.TabIndex = 3;
+            txtStartseiteNachname.TextChanged += filterInput_Changed;
             // 
             // txtStartseiteMitgliederID
             // 
             txtStartseiteMitgliederID.Location = new Point(98, 117);
             txtStartseiteMitgliederID.Name = "txtStartseiteMitgliederID";
-            txtStartseiteMitgliederID.PlaceholderText = "Vorname";
+            txtStartseiteMitgliederID.PlaceholderText = "Mitglieder Nr";
             txtStartseiteMitgliederID.Size = new Size(116, 23);
-            txtStartseiteMitgliederID.TabIndex = 66;
-            txtStartseiteMitgliederID.TextChanged += txtStartseiteMitgliederID_TextChanged;
+            txtStartseiteMitgliederID.TabIndex = 1;
+            txtStartseiteMitgliederID.TextChanged += filterInput_Changed;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Location = new Point(12, 120);
             label5.Name = "label5";
-            label5.Size = new Size(51, 15);
+            label5.Size = new Size(53, 15);
             label5.TabIndex = 65;
-            label5.Text = "Mitgl-ID";
+            label5.Text = "Mitgl-Nr";
             // 
             // label6
             // 
@@ -352,7 +320,8 @@
             txtStartseiteAlterBis.Name = "txtStartseiteAlterBis";
             txtStartseiteAlterBis.PlaceholderText = "Bis";
             txtStartseiteAlterBis.Size = new Size(46, 23);
-            txtStartseiteAlterBis.TabIndex = 69;
+            txtStartseiteAlterBis.TabIndex = 5;
+            txtStartseiteAlterBis.TextChanged += filterInput_Changed;
             // 
             // txtStartseiteAlterVon
             // 
@@ -360,7 +329,8 @@
             txtStartseiteAlterVon.Name = "txtStartseiteAlterVon";
             txtStartseiteAlterVon.PlaceholderText = "Von";
             txtStartseiteAlterVon.Size = new Size(46, 23);
-            txtStartseiteAlterVon.TabIndex = 68;
+            txtStartseiteAlterVon.TabIndex = 4;
+            txtStartseiteAlterVon.TextChanged += filterInput_Changed;
             // 
             // label7
             // 
@@ -391,11 +361,44 @@
             btnStartseiteSpielen.UseVisualStyleBackColor = true;
             btnStartseiteSpielen.Click += btnStartseiteSpielen_Click;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(1095, 40);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(182, 379);
+            dataGridView1.TabIndex = 73;
+            // 
+            // memberBindingSource5
+            // 
+            memberBindingSource5.DataSource = typeof(Database.Entities.Member);
+            // 
+            // button1
+            // 
+            button1.Location = new Point(1058, 199);
+            button1.Name = "button1";
+            button1.Size = new Size(26, 23);
+            button1.TabIndex = 74;
+            button1.Text = "-";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(1058, 250);
+            button2.Name = "button2";
+            button2.Size = new Size(26, 23);
+            button2.TabIndex = 75;
+            button2.Text = "+";
+            button2.UseVisualStyleBackColor = true;
+            // 
             // frmStartseite
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1066, 433);
+            ClientSize = new Size(1295, 433);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(dataGridView1);
             Controls.Add(btnStartseiteSpielen);
             Controls.Add(label8);
             Controls.Add(label6);
@@ -407,10 +410,6 @@
             Controls.Add(txtStartseiteNachname);
             Controls.Add(txtStartseiteName);
             Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(txtStartseiteMitgliederIDBis);
-            Controls.Add(txtStartseiteMitgliederIDVon);
-            Controls.Add(label2);
             Controls.Add(btnStartseiteExpo);
             Controls.Add(btnStartseiteRefresh);
             Controls.Add(btnStartseiteAnzeigen);
@@ -423,6 +422,7 @@
             Name = "frmStartseite";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Dart Verwaltung";
+            Shown += frmStartseite_Shown;
             ((System.ComponentModel.ISupportInitialize)dgMemberListe).EndInit();
             ((System.ComponentModel.ISupportInitialize)memberBindingSource3).EndInit();
             ((System.ComponentModel.ISupportInitialize)memberBindingSource2).EndInit();
@@ -430,6 +430,8 @@
             ((System.ComponentModel.ISupportInitialize)memberBindingSource1).EndInit();
             ((System.ComponentModel.ISupportInitialize)memberBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)memberBindingSource4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)memberBindingSource5).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -450,10 +452,6 @@
         private Button btnStartseiteRefresh;
         private Button btnStartseiteExpo;
         private BindingSource memberBindingSource4;
-        private Label label2;
-        private TextBox txtStartseiteMitgliederIDVon;
-        private TextBox txtStartseiteMitgliederIDBis;
-        private Label label3;
         private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn nrDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn titelDataGridViewTextBoxColumn;
@@ -475,5 +473,9 @@
         private Label label7;
         private Label label8;
         private Button btnStartseiteSpielen;
+        private DataGridView dataGridView1;
+        private BindingSource memberBindingSource5;
+        private Button button1;
+        private Button button2;
     }
 }

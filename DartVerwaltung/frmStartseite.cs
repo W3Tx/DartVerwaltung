@@ -12,9 +12,13 @@ namespace DartVerwaltung
         private DataContext _dataContext = new DataContext();
         private BindingSource _memberBindingSource = new BindingSource();
 
-        public frmStartseite()
+        private Form _form;
+
+        public frmStartseite(Form form)
         {
             InitializeComponent();
+            _form = form;
+
         }
 
         // Überschreibt die OnLoad-Methode, um Daten zu laden und das DataGridView zu binden
@@ -31,6 +35,8 @@ namespace DartVerwaltung
         {
             base.OnClosing(e);
             _dataContext?.Dispose();
+
+            _form.Close();
         }
 
         // Lädt Daten, wenn das Formular angezeigt wird
@@ -151,7 +157,7 @@ namespace DartVerwaltung
         }
 
         // Filtert die Mitgliederliste basierend auf dem eingegebenen Nachnamen
-        private void txtStartseiteNachname_TextChanged(object sender, EventArgs e)
+        /*private void txtStartseiteNachname_TextChanged(object sender, EventArgs e)
         {
             var filterText = txtStartseiteNachname.Text.ToLower();
             var filteredMembers = _dataContext.Members.Local
@@ -172,19 +178,74 @@ namespace DartVerwaltung
 
             _memberBindingSource.DataSource = filteredMembers;
             dgMemberListe.Refresh();
-        }
+        }*/
 
         // Filtert die Mitgliederliste basierend auf der eingegebenen Mitgliedsnummer
-        private void txtStartseiteMitgliederID_TextChanged(object sender, EventArgs e)
+        private void filterInput_Changed(object sender, EventArgs e)
         {
-            var filterText = txtStartseiteMitgliederID.Text.ToLower();
-            var filteredMembers = _dataContext.Members.Local
-                .Where(m => m.Nr.ToString().Contains(filterText))
-                .ToList();
+            var vornameFilter = txtStartseiteName.Text.ToLower();
+            var numberFilter = txtStartseiteMitgliederID.Text.ToLower();
+            var nachnameFilter = txtStartseiteNachname.Text.ToLower();
+            var alterVonFilter = txtStartseiteAlterVon.Text.ToLower();
+            var alterBisFilter = txtStartseiteAlterBis.Text.ToLower();
+
+
+            var query = _dataContext.Members.AsQueryable();
+            if (!string.IsNullOrEmpty(numberFilter))
+            {
+                query = query.Where(m => m.Nr.ToString().ToLower().Contains(numberFilter));
+            }
+
+            if (!string.IsNullOrEmpty(vornameFilter))
+            {
+                query = query.Where(m => m.Vorname.ToLower().Contains(vornameFilter));
+            }
+
+            if (!string.IsNullOrEmpty(nachnameFilter))
+            {
+                query = query.Where(m => m.Nachname.ToLower().Contains(nachnameFilter));
+            }
+
+            if (!string.IsNullOrEmpty(alterVonFilter))
+            {
+                DateTime? startDate = GetDateByAge(alterVonFilter, false);
+                if(startDate != null)
+                {
+                    query = query.Where(m => m.Geburtstag.Date <= startDate);
+                }
+            }
+
+            if (!string.IsNullOrEmpty(alterBisFilter))
+            {
+                DateTime? endDate = GetDateByAge(alterBisFilter, true);
+                if(endDate != null)
+                {
+                    query = query.Where(m => m.Geburtstag.Date >= endDate);
+                }
+            }
+
+            var filteredMembers = query.ToList();
 
             _memberBindingSource.DataSource = filteredMembers;
             dgMemberListe.Refresh();
         }
+
+        private DateTime? GetDateByAge(string alterVonFilter, bool endDate)
+        {
+            if(!int.TryParse(alterVonFilter, out int age))
+            {
+                return null;
+            }
+
+            if(endDate)
+            {
+                return DateTime.Now.AddYears(-age - 1).AddDays(1).Date;
+            }
+
+            return DateTime.Now.AddYears(-age).Date;
+        }
+
+
 
         // Exportiert die Daten des DataGridView in eine CSV-Datei
         private void btnStartseiteExpo_Click(object sender, EventArgs e)
@@ -235,6 +296,11 @@ namespace DartVerwaltung
         {
             frmPlayTime frmPlayTimes = new frmPlayTime();
             frmPlayTimes.ShowDialog();
+        }
+
+        private void frmStartseite_Shown(object sender, EventArgs e)
+        {
+            
         }
     }
 }

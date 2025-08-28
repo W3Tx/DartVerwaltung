@@ -37,6 +37,7 @@
             btnUebersichtSpielen = new Button();
             lblUebersichtFinalNameA = new Label();
             btnClubCancel = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // lblUebersichtNameA
@@ -45,7 +46,7 @@
             lblUebersichtNameA.BackColor = SystemColors.ActiveCaption;
             lblUebersichtNameA.BorderStyle = BorderStyle.FixedSingle;
             lblUebersichtNameA.ForeColor = SystemColors.Control;
-            lblUebersichtNameA.Location = new Point(12, 53);
+            lblUebersichtNameA.Location = new Point(11, 115);
             lblUebersichtNameA.Name = "lblUebersichtNameA";
             lblUebersichtNameA.Padding = new Padding(20, 10, 20, 10);
             lblUebersichtNameA.Size = new Size(92, 37);
@@ -58,7 +59,7 @@
             lblUebersichtRundeBNameA.BackColor = SystemColors.ActiveCaption;
             lblUebersichtRundeBNameA.BorderStyle = BorderStyle.FixedSingle;
             lblUebersichtRundeBNameA.ForeColor = SystemColors.Control;
-            lblUebersichtRundeBNameA.Location = new Point(157, 99);
+            lblUebersichtRundeBNameA.Location = new Point(163, 148);
             lblUebersichtRundeBNameA.Name = "lblUebersichtRundeBNameA";
             lblUebersichtRundeBNameA.Padding = new Padding(20, 10, 20, 10);
             lblUebersichtRundeBNameA.Size = new Size(139, 37);
@@ -71,7 +72,7 @@
             lblUebersichtNameB.BackColor = SystemColors.ActiveCaption;
             lblUebersichtNameB.BorderStyle = BorderStyle.FixedSingle;
             lblUebersichtNameB.ForeColor = SystemColors.Control;
-            lblUebersichtNameB.Location = new Point(12, 145);
+            lblUebersichtNameB.Location = new Point(12, 184);
             lblUebersichtNameB.Name = "lblUebersichtNameB";
             lblUebersichtNameB.Padding = new Padding(20, 10, 20, 10);
             lblUebersichtNameB.Size = new Size(91, 37);
@@ -84,7 +85,7 @@
             lblUebersichtRundeBNameB.BackColor = SystemColors.ActiveCaption;
             lblUebersichtRundeBNameB.BorderStyle = BorderStyle.FixedSingle;
             lblUebersichtRundeBNameB.ForeColor = SystemColors.Control;
-            lblUebersichtRundeBNameB.Location = new Point(158, 280);
+            lblUebersichtRundeBNameB.Location = new Point(163, 308);
             lblUebersichtRundeBNameB.Name = "lblUebersichtRundeBNameB";
             lblUebersichtRundeBNameB.Padding = new Padding(20, 10, 20, 10);
             lblUebersichtRundeBNameB.Size = new Size(138, 37);
@@ -97,7 +98,7 @@
             lblUebersichtNameC.BackColor = SystemColors.ActiveCaption;
             lblUebersichtNameC.BorderStyle = BorderStyle.FixedSingle;
             lblUebersichtNameC.ForeColor = SystemColors.Control;
-            lblUebersichtNameC.Location = new Point(12, 234);
+            lblUebersichtNameC.Location = new Point(12, 274);
             lblUebersichtNameC.Name = "lblUebersichtNameC";
             lblUebersichtNameC.Padding = new Padding(20, 10, 20, 10);
             lblUebersichtNameC.Size = new Size(92, 37);
@@ -110,7 +111,7 @@
             lblUebersichtNameD.BackColor = SystemColors.ActiveCaption;
             lblUebersichtNameD.BorderStyle = BorderStyle.FixedSingle;
             lblUebersichtNameD.ForeColor = SystemColors.Control;
-            lblUebersichtNameD.Location = new Point(12, 322);
+            lblUebersichtNameD.Location = new Point(12, 343);
             lblUebersichtNameD.Name = "lblUebersichtNameD";
             lblUebersichtNameD.Padding = new Padding(20, 10, 20, 10);
             lblUebersichtNameD.Size = new Size(92, 37);
@@ -132,7 +133,7 @@
             lblUebersichtFinalNameA.BackColor = SystemColors.ActiveCaption;
             lblUebersichtFinalNameA.BorderStyle = BorderStyle.FixedSingle;
             lblUebersichtFinalNameA.ForeColor = SystemColors.Control;
-            lblUebersichtFinalNameA.Location = new Point(331, 194);
+            lblUebersichtFinalNameA.Location = new Point(316, 224);
             lblUebersichtFinalNameA.Name = "lblUebersichtFinalNameA";
             lblUebersichtFinalNameA.Padding = new Padding(20, 10, 20, 10);
             lblUebersichtFinalNameA.Size = new Size(120, 37);
@@ -148,6 +149,16 @@
             btnClubCancel.Text = "Schliesen";
             btnClubCancel.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(97, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(260, 45);
+            label1.TabIndex = 127;
+            label1.Text = "Turnierbaum K.O";
+            // 
             // frmPlayTime
             // 
             AcceptButton = btnUebersichtSpielen;
@@ -155,6 +166,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = btnClubCancel;
             ClientSize = new Size(463, 433);
+            Controls.Add(label1);
             Controls.Add(lblUebersichtNameA);
             Controls.Add(lblUebersichtRundeBNameA);
             Controls.Add(lblUebersichtNameB);
@@ -182,5 +194,6 @@
         private Button btnUebersichtSpielen;
         private Label lblUebersichtFinalNameA;
         private Button btnClubCancel;
+        private Label label1;
     }
 }
