@@ -407,9 +407,9 @@
             Controls.Add(dgMemberListe);
             Controls.Add(btnStartseiteLoeschen);
             Controls.Add(btnStartseiteBearbeiten);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "frmStartseite";
             Text = "Dart Verwaltung";
-            Shown += Startseite_Shown;
             ((System.ComponentModel.ISupportInitialize)dgMemberListe).EndInit();
             ((System.ComponentModel.ISupportInitialize)memberBindingSource3).EndInit();
             ((System.ComponentModel.ISupportInitialize)memberBindingSource2).EndInit();

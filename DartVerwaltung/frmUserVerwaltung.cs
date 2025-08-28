@@ -24,6 +24,8 @@ namespace DartVerwaltung
             dtpAustritt.Value = member.Austrittsdatum;
             txtMemberBeruf.Text = member.Beruf;
             txtMemberInfo.Text = member.Informationen;
+
+            // Lade das Profilbild, wenn vorhanden
             if (!string.IsNullOrEmpty(member.Profilbild))
             {
                 byte[] imageBytes = Convert.FromBase64String(member.Profilbild);
@@ -55,6 +57,7 @@ namespace DartVerwaltung
             return DialogResult.OK;
         }
 
+        // Extrahiert das Bild aus dem PictureBox und konvertiert es in einen Base64-String
         private string GetPictureFromPicturebox()
         {
             if (pcMember.Image == null)
@@ -69,16 +72,16 @@ namespace DartVerwaltung
                 return string.Empty;
             }
 
+            // Konvertiert das Bild in ein Byte-Array
             using var ms = new MemoryStream();
             using var clonedImage = new Bitmap(pcMember.Image);
             clonedImage.Save(ms, pcMember.Image.RawFormat);
-            // pcMember.Image.Save(ms, pcMember.Image.RawFormat);
             byte[] imageBytes = ms.ToArray();
 
             return Convert.ToBase64String(imageBytes);
-            //return string.Empty;
         }
 
+        // Berechnet das Alter basierend auf dem Geburtstag
         private string GetAgeByBirthday(DateTime geburtstag)
         {
             // Berechnet das Alter basierend auf dem Geburtstag
@@ -99,18 +102,19 @@ namespace DartVerwaltung
             return age.ToString();
         }
 
-        // Speichert oder bestätigt die Änderungen
+        // Speichert die Änderungen und schließt das Formular
         private void btnMemberSpeichern_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
         }
 
-        // Cancelt die Änderungen
+        // Schließt das Formular ohne Änderungen zu speichern
         private void btnMemberCancel_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
         }
 
+        // Lädt ein Bild in die PictureBox
         private void btnMemberBLaden_Click(object sender, EventArgs e)
         {
             OpenFileDialog fileDialog = new OpenFileDialog();
@@ -120,6 +124,7 @@ namespace DartVerwaltung
             pcMember.Image = Image.FromFile(fileDialog.FileName);
         }
 
+        // Entfernt das Bild aus der PictureBox
         private void btnMemberBLoeschen_Click(object sender, EventArgs e)
         {
             pcMember.Image = null;

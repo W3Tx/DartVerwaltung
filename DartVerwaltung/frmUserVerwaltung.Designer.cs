@@ -301,8 +301,10 @@
             // 
             // frmUserVerwaltung
             // 
+            AcceptButton = btnMemberSpeichern;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            CancelButton = btnMemberCancel;
             ClientSize = new Size(800, 450);
             Controls.Add(txtMemberInfo);
             Controls.Add(dtpAustritt);
@@ -331,8 +333,9 @@
             Controls.Add(label2);
             Controls.Add(pcMember);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "frmUserVerwaltung";
-            Text = "UserVerwaltung";
+            Text = "Mitglieder Verwaltung";
             ((System.ComponentModel.ISupportInitialize)pcMember).EndInit();
             ResumeLayout(false);
             PerformLayout();

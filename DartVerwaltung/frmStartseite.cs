@@ -8,7 +8,7 @@ namespace DartVerwaltung
 {
     public partial class frmStartseite : Form
     {
-        // EF Core Datenbank verwaltet die Operationen
+        // Initialisiert den DataContext und BindingSource
         private DataContext _dataContext = new DataContext();
         private BindingSource _memberBindingSource = new BindingSource();
 
@@ -17,6 +17,7 @@ namespace DartVerwaltung
             InitializeComponent();
         }
 
+        // Überschreibt die OnLoad-Methode, um Daten zu laden und das DataGridView zu binden
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
@@ -25,36 +26,39 @@ namespace DartVerwaltung
             dgMemberListe.DataSource = _memberBindingSource;
         }
 
+        // Überschreibt die OnClosing-Methode, um den DataContext zu entsorgen
         protected override void OnClosing(CancelEventArgs e)
         {
             base.OnClosing(e);
             _dataContext?.Dispose();
         }
 
+        // Lädt Daten, wenn das Formular angezeigt wird
+        /*
         private void Startseite_Shown(object sender, EventArgs e)
         {
             // Code Beispiel um Daten zu laden
             // Erstellt eine Liste aller Mitglieder in der Datenbank
             // List<Member> memberList = _dataContext.Members.ToList();
         }
+        */
 
+        // Öffnet das Formular zur Hinzufügung eines neuen Mitglieds
         private void btnStartseiteHinzufuegen_Click(object sender, EventArgs e)
         {
             frmUserVerwaltung frmUserVerwaltung = new frmUserVerwaltung();
-
-            // Member Objekt wird erstellt und an das Formular übergeben
             Member newMember = new Member();
-
             EditMember(newMember);
         }
 
+        // Öffnet das Formular zur Anzeige von Clubstatistiken
         private void btnStartseiteAnzeigen_Click(object sender, EventArgs e)
         {
-            // Öffnet das Formular zur Statistik
             frmClubStatistik frmClubStatistiken = new frmClubStatistik(_dataContext);
             frmClubStatistiken.ShowDialog();
         }
 
+        // Öffnet das Formular zur Bearbeitung des ausgewählten Mitglieds
         private void btnStartseiteBearbeiten_Click(object sender, EventArgs e)
         {
             var test = dgMemberListe.CurrentRow.DataBoundItem;
@@ -64,7 +68,6 @@ namespace DartVerwaltung
             }
         }
 
-        // TEST!!!
         // Aktiviert oder deaktiviert den Bearbeiten-Button basierend auf der Auswahl im DataGridView
         private void dgMemberListe_SelectionChanged(object sender, EventArgs e)
         {
@@ -85,6 +88,7 @@ namespace DartVerwaltung
             }
         }
 
+        // Öffnet das Formular zur Bearbeitung eines Mitglieds und speichert die Änderungen
         private void EditMember(Member member)
         {
             frmUserVerwaltung frmUserVerwaltung = new frmUserVerwaltung();
@@ -94,6 +98,7 @@ namespace DartVerwaltung
                 return;
             }
 
+            // Überprüft, ob die Mitgliedsnummer bereits vergeben ist
             if (member.Id > 0)
             {
                 Member? existingMember = _dataContext.Members.FirstOrDefault(m => m.Nr == member.Nr && m.Id != member.Id);
@@ -121,6 +126,7 @@ namespace DartVerwaltung
             dgMemberListe.Refresh();
         }
 
+        // Löscht das ausgewählte Mitglied nach Bestätigung
         private void btnStartseiteLoeschen_Click(object sender, EventArgs e)
         {
 
@@ -138,26 +144,25 @@ namespace DartVerwaltung
             }
         }
 
+        // Aktualisiert die Anzeige des DataGridView
         private void btnStartseiteRefresh_Click(object sender, EventArgs e)
         {
             dgMemberListe.Refresh();
         }
 
+        // Filtert die Mitgliederliste basierend auf dem eingegebenen Nachnamen
         private void txtStartseiteNachname_TextChanged(object sender, EventArgs e)
         {
-            // Filtert die Mitgliederliste basierend auf dem eingegebenen Nachnamen
             var filterText = txtStartseiteNachname.Text.ToLower();
-            // Verwendet die lokale Ansicht der Mitglieder, um die Filterung durchzuführen
             var filteredMembers = _dataContext.Members.Local
-                // Ignoriert Groß-/Kleinschreibung bei der Suche
                 .Where(m => m.Nachname.ToLower().Contains(filterText))
                 .ToList();
 
-            // Aktualisiert die Datenquelle des BindingSource mit der gefilterten Liste
             _memberBindingSource.DataSource = filteredMembers;
             dgMemberListe.Refresh();
         }
 
+        // Filtert die Mitgliederliste basierend auf dem eingegebenen Vornamen
         private void txtStartseiteName_TextChanged(object sender, EventArgs e)
         {
             var filterText = txtStartseiteName.Text.ToLower();
@@ -169,6 +174,7 @@ namespace DartVerwaltung
             dgMemberListe.Refresh();
         }
 
+        // Filtert die Mitgliederliste basierend auf der eingegebenen Mitgliedsnummer
         private void txtStartseiteMitgliederID_TextChanged(object sender, EventArgs e)
         {
             var filterText = txtStartseiteMitgliederID.Text.ToLower();
@@ -180,6 +186,7 @@ namespace DartVerwaltung
             dgMemberListe.Refresh();
         }
 
+        // Exportiert die Daten des DataGridView in eine CSV-Datei
         private void btnStartseiteExpo_Click(object sender, EventArgs e)
         {
             using (SaveFileDialog saveFileDialog = new SaveFileDialog())
@@ -196,11 +203,12 @@ namespace DartVerwaltung
             }
         }
 
+        // Methode zum Exportieren des DataGridView in eine CSV-Datei
         public void ExportDatagridViewToCSV(DataGridView dgv, string filename)
         {
             using (StreamWriter sw = new StreamWriter(filename))
             {
-                // Kopfzeile mit Spaltennamen schreiben 
+                // Kopfzeile schreiben
                 for (int i = 0; i < dgv.Columns.Count; i++)
                 {
                     if (i > 0) sw.Write(";");
@@ -209,7 +217,7 @@ namespace DartVerwaltung
 
                 sw.WriteLine();
 
-                // Zeilen schreiben
+                // Datenzeilen schreiben
                 for (int row = 0; row < dgv.Rows.Count; row++)
                 {
                     for (int col = 0; col < dgv.Columns.Count; col++)
