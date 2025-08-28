@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DartVerwaltung.Database.Entities
+﻿namespace DartVerwaltung.Database.Entities
 {
     public class Login
     {

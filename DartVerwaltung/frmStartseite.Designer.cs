@@ -65,10 +65,10 @@
             label7 = new Label();
             label8 = new Label();
             btnStartseiteSpielen = new Button();
-            dataGridView1 = new DataGridView();
+            dgPlayerListe = new DataGridView();
             memberBindingSource5 = new BindingSource(components);
-            button1 = new Button();
-            button2 = new Button();
+            btnSpielerHinzufuegen = new Button();
+            btnVerschiebeSpieler = new Button();
             ((System.ComponentModel.ISupportInitialize)dgMemberListe).BeginInit();
             ((System.ComponentModel.ISupportInitialize)memberBindingSource3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)memberBindingSource2).BeginInit();
@@ -76,7 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)memberBindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)memberBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)memberBindingSource4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgPlayerListe).BeginInit();
             ((System.ComponentModel.ISupportInitialize)memberBindingSource5).BeginInit();
             SuspendLayout();
             // 
@@ -361,44 +361,46 @@
             btnStartseiteSpielen.UseVisualStyleBackColor = true;
             btnStartseiteSpielen.Click += btnStartseiteSpielen_Click;
             // 
-            // dataGridView1
+            // dgPlayerListe
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(1095, 40);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(182, 379);
-            dataGridView1.TabIndex = 73;
+            dgPlayerListe.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgPlayerListe.Location = new Point(1095, 40);
+            dgPlayerListe.Name = "dgPlayerListe";
+            dgPlayerListe.Size = new Size(182, 379);
+            dgPlayerListe.TabIndex = 73;
             // 
             // memberBindingSource5
             // 
             memberBindingSource5.DataSource = typeof(Database.Entities.Member);
             // 
-            // button1
+            // btnSpielerHinzufuegen
             // 
-            button1.Location = new Point(1058, 199);
-            button1.Name = "button1";
-            button1.Size = new Size(26, 23);
-            button1.TabIndex = 74;
-            button1.Text = "-";
-            button1.UseVisualStyleBackColor = true;
+            btnSpielerHinzufuegen.Location = new Point(1058, 199);
+            btnSpielerHinzufuegen.Name = "btnSpielerHinzufuegen";
+            btnSpielerHinzufuegen.Size = new Size(26, 23);
+            btnSpielerHinzufuegen.TabIndex = 74;
+            btnSpielerHinzufuegen.Text = "+";
+            btnSpielerHinzufuegen.UseVisualStyleBackColor = true;
+            btnSpielerHinzufuegen.Click += btnSpielerHinzufuegen_Click;
             // 
-            // button2
+            // btnVerschiebeSpieler
             // 
-            button2.Location = new Point(1058, 250);
-            button2.Name = "button2";
-            button2.Size = new Size(26, 23);
-            button2.TabIndex = 75;
-            button2.Text = "+";
-            button2.UseVisualStyleBackColor = true;
+            btnVerschiebeSpieler.Location = new Point(1058, 250);
+            btnVerschiebeSpieler.Name = "btnVerschiebeSpieler";
+            btnVerschiebeSpieler.Size = new Size(26, 23);
+            btnVerschiebeSpieler.TabIndex = 75;
+            btnVerschiebeSpieler.Text = "-";
+            btnVerschiebeSpieler.UseVisualStyleBackColor = true;
+            btnVerschiebeSpieler.Click += btnVerschiebeSpieler_Click;
             // 
             // frmStartseite
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1295, 433);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(dataGridView1);
+            Controls.Add(btnVerschiebeSpieler);
+            Controls.Add(btnSpielerHinzufuegen);
+            Controls.Add(dgPlayerListe);
             Controls.Add(btnStartseiteSpielen);
             Controls.Add(label8);
             Controls.Add(label6);
@@ -422,7 +424,6 @@
             Name = "frmStartseite";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Dart Verwaltung";
-            Shown += frmStartseite_Shown;
             ((System.ComponentModel.ISupportInitialize)dgMemberListe).EndInit();
             ((System.ComponentModel.ISupportInitialize)memberBindingSource3).EndInit();
             ((System.ComponentModel.ISupportInitialize)memberBindingSource2).EndInit();
@@ -430,7 +431,7 @@
             ((System.ComponentModel.ISupportInitialize)memberBindingSource1).EndInit();
             ((System.ComponentModel.ISupportInitialize)memberBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)memberBindingSource4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgPlayerListe).EndInit();
             ((System.ComponentModel.ISupportInitialize)memberBindingSource5).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -473,9 +474,9 @@
         private Label label7;
         private Label label8;
         private Button btnStartseiteSpielen;
-        private DataGridView dataGridView1;
+        private DataGridView dgPlayerListe;
         private BindingSource memberBindingSource5;
-        private Button button1;
-        private Button button2;
+        private Button btnSpielerHinzufuegen;
+        private Button btnVerschiebeSpieler;
     }
 }

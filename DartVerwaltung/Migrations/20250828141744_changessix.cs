@@ -1,0 +1,47 @@
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+
+#nullable disable
+
+namespace DartVerwaltung.Migrations
+{
+    /// <inheritdoc />
+    public partial class changessix : Migration
+    {
+        /// <inheritdoc />
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.AlterColumn<string>(
+                name: "Profilbild",
+                table: "Members",
+                type: "TEXT",
+                nullable: false,
+                defaultValue: "",
+                oldClrType: typeof(byte[]),
+                oldType: "BLOB",
+                oldNullable: true);
+
+            migrationBuilder.AddColumn<bool>(
+                name: "isPlayer",
+                table: "Members",
+                type: "INTEGER",
+                nullable: false,
+                defaultValue: false);
+        }
+
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropColumn(
+                name: "isPlayer",
+                table: "Members");
+
+            migrationBuilder.AlterColumn<byte[]>(
+                name: "Profilbild",
+                table: "Members",
+                type: "BLOB",
+                nullable: true,
+                oldClrType: typeof(string),
+                oldType: "TEXT");
+        }
+    }
+}

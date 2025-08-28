@@ -15,5 +15,6 @@
         public DateTime Austrittsdatum { get; set; } = DateTime.Now;
         public string Beruf { get; set; } = string.Empty;
         public string Informationen {  get; set; } = string.Empty;
+        public bool isPlayer { get; set; } = false;
     }
 }

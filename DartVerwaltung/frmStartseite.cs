@@ -10,8 +10,8 @@ namespace DartVerwaltung
     {
         // Initialisiert den DataContext und BindingSource
         private DataContext _dataContext = new DataContext();
-        private BindingSource _memberBindingSource = new BindingSource();
-
+        private BindingSource _memberBindingSource = [];
+        private BindingSource _playTimeBindingSource = [];
         private Form _form;
 
         public frmStartseite(Form form)
@@ -26,8 +26,11 @@ namespace DartVerwaltung
         {
             base.OnLoad(e);
             _dataContext.Members.Load();
-            _memberBindingSource.DataSource = _dataContext.Members.Local.ToBindingList();
+            _memberBindingSource.DataSource = _dataContext.Members.Local.Where(m => !m.isPlayer).ToList();
             dgMemberListe.DataSource = _memberBindingSource;
+
+            _playTimeBindingSource.DataSource = _dataContext.Members.Local.Where(m => m.isPlayer).ToList();
+            dgPlayerListe.DataSource = _playTimeBindingSource;
         }
 
         // Überschreibt die OnClosing-Methode, um den DataContext zu entsorgen
@@ -38,16 +41,6 @@ namespace DartVerwaltung
 
             _form.Close();
         }
-
-        // Lädt Daten, wenn das Formular angezeigt wird
-        /*
-        private void Startseite_Shown(object sender, EventArgs e)
-        {
-            // Code Beispiel um Daten zu laden
-            // Erstellt eine Liste aller Mitglieder in der Datenbank
-            // List<Member> memberList = _dataContext.Members.ToList();
-        }
-        */
 
         // Öffnet das Formular zur Hinzufügung eines neuen Mitglieds
         private void btnStartseiteHinzufuegen_Click(object sender, EventArgs e)
@@ -156,30 +149,6 @@ namespace DartVerwaltung
             dgMemberListe.Refresh();
         }
 
-        // Filtert die Mitgliederliste basierend auf dem eingegebenen Nachnamen
-        /*private void txtStartseiteNachname_TextChanged(object sender, EventArgs e)
-        {
-            var filterText = txtStartseiteNachname.Text.ToLower();
-            var filteredMembers = _dataContext.Members.Local
-                .Where(m => m.Nachname.ToLower().Contains(filterText))
-                .ToList();
-
-            _memberBindingSource.DataSource = filteredMembers;
-            dgMemberListe.Refresh();
-        }
-
-        // Filtert die Mitgliederliste basierend auf dem eingegebenen Vornamen
-        private void txtStartseiteName_TextChanged(object sender, EventArgs e)
-        {
-            var filterText = txtStartseiteName.Text.ToLower();
-            var filteredMembers = _dataContext.Members.Local
-                .Where(m => m.Vorname.ToLower().Contains(filterText))
-                .ToList();
-
-            _memberBindingSource.DataSource = filteredMembers;
-            dgMemberListe.Refresh();
-        }*/
-
         // Filtert die Mitgliederliste basierend auf der eingegebenen Mitgliedsnummer
         private void filterInput_Changed(object sender, EventArgs e)
         {
@@ -209,19 +178,21 @@ namespace DartVerwaltung
             if (!string.IsNullOrEmpty(alterVonFilter))
             {
                 DateTime? startDate = GetDateByAge(alterVonFilter, false);
-                if(startDate != null)
+                if (startDate != null)
                 {
                     query = query.Where(m => m.Geburtstag.Date <= startDate);
                 }
+                dgMemberListe.Refresh();
             }
 
             if (!string.IsNullOrEmpty(alterBisFilter))
             {
                 DateTime? endDate = GetDateByAge(alterBisFilter, true);
-                if(endDate != null)
+                if (endDate != null)
                 {
                     query = query.Where(m => m.Geburtstag.Date >= endDate);
                 }
+                dgMemberListe.Refresh();
             }
 
             var filteredMembers = query.ToList();
@@ -232,12 +203,12 @@ namespace DartVerwaltung
 
         private DateTime? GetDateByAge(string alterVonFilter, bool endDate)
         {
-            if(!int.TryParse(alterVonFilter, out int age))
+            if (!int.TryParse(alterVonFilter, out int age))
             {
                 return null;
             }
 
-            if(endDate)
+            if (endDate)
             {
                 return DateTime.Now.AddYears(-age - 1).AddDays(1).Date;
             }
@@ -298,9 +269,46 @@ namespace DartVerwaltung
             frmPlayTimes.ShowDialog();
         }
 
-        private void frmStartseite_Shown(object sender, EventArgs e)
+        // Verschiebt ausgewählte Mitglieder in die Spieler-Liste
+        private void btnVerschiebeSpieler_Click(object sender, EventArgs e)
         {
-            
+            foreach (DataGridViewRow row in dgPlayerListe.SelectedRows)
+            {
+                if (row.DataBoundItem is Member selectedMember)
+                {
+                    selectedMember.isPlayer = false;
+                    _dataContext.Members.Update(selectedMember);
+                }
+            }
+            _dataContext.SaveChanges();
+
+            // Bindingsquellen aktualisieren
+            _memberBindingSource.DataSource = _dataContext.Members.Local.Where(m => !m.isPlayer).ToList();
+            _playTimeBindingSource.DataSource = _dataContext.Members.Local.Where(m => m.isPlayer).ToList();
+
+            dgMemberListe.Refresh();
+            dgPlayerListe.Refresh();
+        }
+
+        // Fügt ausgewählte Mitglieder der Spieler-Liste hinzu
+        private void btnSpielerHinzufuegen_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgMemberListe.SelectedRows)
+            {
+                if (row.DataBoundItem is Member selectedMember)
+                {
+                    selectedMember.isPlayer = true;
+                    _dataContext.Members.Update(selectedMember);
+                }
+            }
+            _dataContext.SaveChanges();
+
+            // Bindingsquellen aktualisieren
+            _memberBindingSource.DataSource = _dataContext.Members.Local.Where(m => !m.isPlayer).ToList();
+            _playTimeBindingSource.DataSource = _dataContext.Members.Local.Where(m => m.isPlayer).ToList();
+
+            dgMemberListe.Refresh();
+            dgPlayerListe.Refresh();
         }
     }
 }
