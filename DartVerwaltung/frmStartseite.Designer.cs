@@ -91,7 +91,7 @@
             // 
             btnStartseiteLoeschen.Location = new Point(147, 309);
             btnStartseiteLoeschen.Name = "btnStartseiteLoeschen";
-            btnStartseiteLoeschen.Size = new Size(75, 23);
+            btnStartseiteLoeschen.Size = new Size(67, 23);
             btnStartseiteLoeschen.TabIndex = 2;
             btnStartseiteLoeschen.Text = "Löschen";
             btnStartseiteLoeschen.UseVisualStyleBackColor = true;
@@ -108,7 +108,7 @@
             dgMemberListe.EditMode = DataGridViewEditMode.EditProgrammatically;
             dgMemberListe.Location = new Point(228, 40);
             dgMemberListe.Name = "dgMemberListe";
-            dgMemberListe.Size = new Size(760, 379);
+            dgMemberListe.Size = new Size(824, 379);
             dgMemberListe.TabIndex = 44;
             dgMemberListe.SelectionChanged += dgMemberListe_SelectionChanged;
             // 
@@ -208,7 +208,7 @@
             // 
             btnStartseiteHinzufuegen.Location = new Point(12, 338);
             btnStartseiteHinzufuegen.Name = "btnStartseiteHinzufuegen";
-            btnStartseiteHinzufuegen.Size = new Size(210, 23);
+            btnStartseiteHinzufuegen.Size = new Size(202, 23);
             btnStartseiteHinzufuegen.TabIndex = 45;
             btnStartseiteHinzufuegen.Text = "Hinzufügen";
             btnStartseiteHinzufuegen.UseVisualStyleBackColor = true;
@@ -225,7 +225,7 @@
             // 
             // btnStartseiteAnzeigen
             // 
-            btnStartseiteAnzeigen.Location = new Point(882, 11);
+            btnStartseiteAnzeigen.Location = new Point(946, 11);
             btnStartseiteAnzeigen.Name = "btnStartseiteAnzeigen";
             btnStartseiteAnzeigen.Size = new Size(106, 23);
             btnStartseiteAnzeigen.TabIndex = 48;
@@ -237,7 +237,7 @@
             // 
             btnStartseiteRefresh.Location = new Point(12, 367);
             btnStartseiteRefresh.Name = "btnStartseiteRefresh";
-            btnStartseiteRefresh.Size = new Size(210, 23);
+            btnStartseiteRefresh.Size = new Size(202, 23);
             btnStartseiteRefresh.TabIndex = 49;
             btnStartseiteRefresh.Text = "Refresh";
             btnStartseiteRefresh.UseVisualStyleBackColor = true;
@@ -247,7 +247,7 @@
             // 
             btnStartseiteExpo.Location = new Point(12, 396);
             btnStartseiteExpo.Name = "btnStartseiteExpo";
-            btnStartseiteExpo.Size = new Size(210, 23);
+            btnStartseiteExpo.Size = new Size(202, 23);
             btnStartseiteExpo.TabIndex = 51;
             btnStartseiteExpo.Text = "Exportieren";
             btnStartseiteExpo.UseVisualStyleBackColor = true;
@@ -260,7 +260,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(15, 91);
+            label2.Location = new Point(12, 91);
             label2.Name = "label2";
             label2.Size = new Size(56, 15);
             label2.TabIndex = 55;
@@ -268,7 +268,7 @@
             // 
             // txtStartseiteMitgliederIDVon
             // 
-            txtStartseiteMitgliederIDVon.Location = new Point(106, 88);
+            txtStartseiteMitgliederIDVon.Location = new Point(98, 88);
             txtStartseiteMitgliederIDVon.Name = "txtStartseiteMitgliederIDVon";
             txtStartseiteMitgliederIDVon.PlaceholderText = "Von";
             txtStartseiteMitgliederIDVon.Size = new Size(46, 23);
@@ -276,7 +276,7 @@
             // 
             // txtStartseiteMitgliederIDBis
             // 
-            txtStartseiteMitgliederIDBis.Location = new Point(176, 88);
+            txtStartseiteMitgliederIDBis.Location = new Point(168, 88);
             txtStartseiteMitgliederIDBis.Name = "txtStartseiteMitgliederIDBis";
             txtStartseiteMitgliederIDBis.PlaceholderText = "Bis";
             txtStartseiteMitgliederIDBis.Size = new Size(46, 23);
@@ -285,7 +285,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(158, 91);
+            label3.Location = new Point(150, 91);
             label3.Name = "label3";
             label3.Size = new Size(12, 15);
             label3.TabIndex = 58;
@@ -294,7 +294,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(15, 149);
+            label4.Location = new Point(12, 149);
             label4.Name = "label4";
             label4.Size = new Size(39, 15);
             label4.TabIndex = 59;
@@ -302,7 +302,7 @@
             // 
             // txtStartseiteName
             // 
-            txtStartseiteName.Location = new Point(106, 146);
+            txtStartseiteName.Location = new Point(98, 146);
             txtStartseiteName.Name = "txtStartseiteName";
             txtStartseiteName.PlaceholderText = "Vorname";
             txtStartseiteName.Size = new Size(116, 23);
@@ -311,7 +311,7 @@
             // 
             // txtStartseiteNachname
             // 
-            txtStartseiteNachname.Location = new Point(106, 175);
+            txtStartseiteNachname.Location = new Point(98, 175);
             txtStartseiteNachname.Name = "txtStartseiteNachname";
             txtStartseiteNachname.PlaceholderText = "Nachname";
             txtStartseiteNachname.Size = new Size(116, 23);
@@ -320,7 +320,7 @@
             // 
             // txtStartseiteMitgliederID
             // 
-            txtStartseiteMitgliederID.Location = new Point(106, 117);
+            txtStartseiteMitgliederID.Location = new Point(98, 117);
             txtStartseiteMitgliederID.Name = "txtStartseiteMitgliederID";
             txtStartseiteMitgliederID.PlaceholderText = "Vorname";
             txtStartseiteMitgliederID.Size = new Size(116, 23);
@@ -330,7 +330,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(15, 120);
+            label5.Location = new Point(12, 120);
             label5.Name = "label5";
             label5.Size = new Size(51, 15);
             label5.TabIndex = 65;
@@ -339,7 +339,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(158, 207);
+            label6.Location = new Point(150, 207);
             label6.Name = "label6";
             label6.Size = new Size(12, 15);
             label6.TabIndex = 70;
@@ -347,7 +347,7 @@
             // 
             // txtStartseiteAlterBis
             // 
-            txtStartseiteAlterBis.Location = new Point(176, 204);
+            txtStartseiteAlterBis.Location = new Point(168, 204);
             txtStartseiteAlterBis.Name = "txtStartseiteAlterBis";
             txtStartseiteAlterBis.PlaceholderText = "Bis";
             txtStartseiteAlterBis.Size = new Size(46, 23);
@@ -355,7 +355,7 @@
             // 
             // txtStartseiteAlterVon
             // 
-            txtStartseiteAlterVon.Location = new Point(106, 204);
+            txtStartseiteAlterVon.Location = new Point(98, 204);
             txtStartseiteAlterVon.Name = "txtStartseiteAlterVon";
             txtStartseiteAlterVon.PlaceholderText = "Von";
             txtStartseiteAlterVon.Size = new Size(46, 23);
@@ -364,7 +364,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(15, 207);
+            label7.Location = new Point(12, 207);
             label7.Name = "label7";
             label7.Size = new Size(55, 15);
             label7.TabIndex = 67;
@@ -374,7 +374,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(15, 40);
+            label8.Location = new Point(12, 15);
             label8.Name = "label8";
             label8.Size = new Size(54, 15);
             label8.TabIndex = 71;
@@ -384,7 +384,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1000, 433);
+            ClientSize = new Size(1066, 433);
             Controls.Add(label8);
             Controls.Add(label6);
             Controls.Add(txtStartseiteAlterBis);
@@ -409,6 +409,7 @@
             Controls.Add(btnStartseiteBearbeiten);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "frmStartseite";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Dart Verwaltung";
             ((System.ComponentModel.ISupportInitialize)dgMemberListe).EndInit();
             ((System.ComponentModel.ISupportInitialize)memberBindingSource3).EndInit();

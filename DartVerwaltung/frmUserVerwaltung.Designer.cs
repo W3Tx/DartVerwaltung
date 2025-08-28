@@ -61,7 +61,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(490, 138);
+            label5.Location = new Point(465, 118);
             label5.Name = "label5";
             label5.Size = new Size(81, 15);
             label5.TabIndex = 22;
@@ -70,7 +70,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(250, 138);
+            label4.Location = new Point(225, 118);
             label4.Name = "label4";
             label4.Size = new Size(29, 15);
             label4.TabIndex = 21;
@@ -79,7 +79,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(490, 109);
+            label3.Location = new Point(465, 89);
             label3.Name = "label3";
             label3.Size = new Size(65, 15);
             label3.TabIndex = 20;
@@ -88,7 +88,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(250, 109);
+            label2.Location = new Point(225, 89);
             label2.Name = "label2";
             label2.Size = new Size(54, 15);
             label2.TabIndex = 19;
@@ -97,7 +97,7 @@
             // pcMember
             // 
             pcMember.BackColor = SystemColors.ActiveBorder;
-            pcMember.Location = new Point(77, 64);
+            pcMember.Location = new Point(12, 12);
             pcMember.Name = "pcMember";
             pcMember.Size = new Size(150, 181);
             pcMember.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -107,7 +107,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(250, 64);
+            label1.Location = new Point(225, 12);
             label1.Name = "label1";
             label1.Size = new Size(108, 15);
             label1.TabIndex = 12;
@@ -116,7 +116,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(250, 167);
+            label6.Location = new Point(225, 147);
             label6.Name = "label6";
             label6.Size = new Size(65, 15);
             label6.TabIndex = 23;
@@ -125,7 +125,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(250, 196);
+            label8.Location = new Point(225, 176);
             label8.Name = "label8";
             label8.Size = new Size(82, 15);
             label8.TabIndex = 25;
@@ -134,7 +134,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(490, 196);
+            label9.Location = new Point(465, 176);
             label9.Name = "label9";
             label9.Size = new Size(86, 15);
             label9.TabIndex = 26;
@@ -143,7 +143,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(250, 225);
+            label10.Location = new Point(225, 205);
             label10.Name = "label10";
             label10.Size = new Size(35, 15);
             label10.TabIndex = 27;
@@ -152,7 +152,7 @@
             // txtMemberVorname
             // 
             txtMemberVorname.BorderStyle = BorderStyle.FixedSingle;
-            txtMemberVorname.Location = new Point(338, 106);
+            txtMemberVorname.Location = new Point(313, 86);
             txtMemberVorname.Name = "txtMemberVorname";
             txtMemberVorname.Size = new Size(100, 23);
             txtMemberVorname.TabIndex = 28;
@@ -160,7 +160,7 @@
             // txtMemberNachname
             // 
             txtMemberNachname.BorderStyle = BorderStyle.FixedSingle;
-            txtMemberNachname.Location = new Point(582, 106);
+            txtMemberNachname.Location = new Point(557, 86);
             txtMemberNachname.Name = "txtMemberNachname";
             txtMemberNachname.Size = new Size(100, 23);
             txtMemberNachname.TabIndex = 29;
@@ -168,7 +168,7 @@
             // txtMemberTitel
             // 
             txtMemberTitel.BorderStyle = BorderStyle.FixedSingle;
-            txtMemberTitel.Location = new Point(338, 135);
+            txtMemberTitel.Location = new Point(313, 115);
             txtMemberTitel.Name = "txtMemberTitel";
             txtMemberTitel.Size = new Size(100, 23);
             txtMemberTitel.TabIndex = 30;
@@ -176,7 +176,7 @@
             // txtMemberStand
             // 
             txtMemberStand.BorderStyle = BorderStyle.FixedSingle;
-            txtMemberStand.Location = new Point(582, 135);
+            txtMemberStand.Location = new Point(557, 115);
             txtMemberStand.Name = "txtMemberStand";
             txtMemberStand.Size = new Size(100, 23);
             txtMemberStand.TabIndex = 31;
@@ -184,7 +184,7 @@
             // txtMemberBeruf
             // 
             txtMemberBeruf.BorderStyle = BorderStyle.FixedSingle;
-            txtMemberBeruf.Location = new Point(338, 222);
+            txtMemberBeruf.Location = new Point(313, 202);
             txtMemberBeruf.Name = "txtMemberBeruf";
             txtMemberBeruf.Size = new Size(344, 23);
             txtMemberBeruf.TabIndex = 36;
@@ -192,7 +192,7 @@
             // txtMemberNummer
             // 
             txtMemberNummer.BorderStyle = BorderStyle.FixedSingle;
-            txtMemberNummer.Location = new Point(364, 61);
+            txtMemberNummer.Location = new Point(339, 9);
             txtMemberNummer.Name = "txtMemberNummer";
             txtMemberNummer.Size = new Size(318, 23);
             txtMemberNummer.TabIndex = 37;
@@ -200,16 +200,16 @@
             // txtMemberInfo
             // 
             txtMemberInfo.BorderStyle = BorderStyle.FixedSingle;
-            txtMemberInfo.Location = new Point(250, 294);
+            txtMemberInfo.Location = new Point(225, 298);
             txtMemberInfo.Name = "txtMemberInfo";
-            txtMemberInfo.Size = new Size(432, 94);
+            txtMemberInfo.Size = new Size(432, 123);
             txtMemberInfo.TabIndex = 38;
             txtMemberInfo.Text = "";
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(250, 276);
+            label11.Location = new Point(225, 280);
             label11.Name = "label11";
             label11.Size = new Size(83, 15);
             label11.TabIndex = 39;
@@ -217,7 +217,7 @@
             // 
             // btnMemberBLaden
             // 
-            btnMemberBLaden.Location = new Point(77, 251);
+            btnMemberBLaden.Location = new Point(12, 199);
             btnMemberBLaden.Name = "btnMemberBLaden";
             btnMemberBLaden.Size = new Size(60, 25);
             btnMemberBLaden.TabIndex = 40;
@@ -227,7 +227,7 @@
             // 
             // btnMemberBLoeschen
             // 
-            btnMemberBLoeschen.Location = new Point(167, 251);
+            btnMemberBLoeschen.Location = new Point(102, 199);
             btnMemberBLoeschen.Name = "btnMemberBLoeschen";
             btnMemberBLoeschen.Size = new Size(60, 25);
             btnMemberBLoeschen.TabIndex = 41;
@@ -237,7 +237,7 @@
             // 
             // btnMemberCancel
             // 
-            btnMemberCancel.Location = new Point(713, 415);
+            btnMemberCancel.Location = new Point(979, 398);
             btnMemberCancel.Name = "btnMemberCancel";
             btnMemberCancel.Size = new Size(75, 23);
             btnMemberCancel.TabIndex = 42;
@@ -247,7 +247,7 @@
             // 
             // btnMemberSpeichern
             // 
-            btnMemberSpeichern.Location = new Point(632, 415);
+            btnMemberSpeichern.Location = new Point(898, 398);
             btnMemberSpeichern.Name = "btnMemberSpeichern";
             btnMemberSpeichern.Size = new Size(75, 23);
             btnMemberSpeichern.TabIndex = 43;
@@ -258,7 +258,7 @@
             // dtpGeburtstag
             // 
             dtpGeburtstag.Format = DateTimePickerFormat.Short;
-            dtpGeburtstag.Location = new Point(338, 164);
+            dtpGeburtstag.Location = new Point(313, 144);
             dtpGeburtstag.MinDate = new DateTime(1900, 1, 1, 0, 0, 0, 0);
             dtpGeburtstag.Name = "dtpGeburtstag";
             dtpGeburtstag.Size = new Size(100, 23);
@@ -267,7 +267,7 @@
             // dtpEintritt
             // 
             dtpEintritt.Format = DateTimePickerFormat.Short;
-            dtpEintritt.Location = new Point(338, 193);
+            dtpEintritt.Location = new Point(313, 173);
             dtpEintritt.MinDate = new DateTime(1900, 1, 1, 0, 0, 0, 0);
             dtpEintritt.Name = "dtpEintritt";
             dtpEintritt.Size = new Size(100, 23);
@@ -276,7 +276,7 @@
             // dtpAustritt
             // 
             dtpAustritt.Format = DateTimePickerFormat.Short;
-            dtpAustritt.Location = new Point(582, 193);
+            dtpAustritt.Location = new Point(557, 173);
             dtpAustritt.MinDate = new DateTime(1900, 1, 1, 0, 0, 0, 0);
             dtpAustritt.Name = "dtpAustritt";
             dtpAustritt.Size = new Size(100, 23);
@@ -285,7 +285,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(490, 167);
+            label7.Location = new Point(465, 147);
             label7.Name = "label7";
             label7.Size = new Size(32, 15);
             label7.TabIndex = 24;
@@ -294,7 +294,7 @@
             // txtMemberAlter
             // 
             txtMemberAlter.BorderStyle = BorderStyle.FixedSingle;
-            txtMemberAlter.Location = new Point(582, 164);
+            txtMemberAlter.Location = new Point(557, 144);
             txtMemberAlter.Name = "txtMemberAlter";
             txtMemberAlter.Size = new Size(100, 23);
             txtMemberAlter.TabIndex = 33;
@@ -305,7 +305,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = btnMemberCancel;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1066, 433);
             Controls.Add(txtMemberInfo);
             Controls.Add(dtpAustritt);
             Controls.Add(dtpEintritt);
@@ -335,6 +335,7 @@
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "frmUserVerwaltung";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Mitglieder Verwaltung";
             ((System.ComponentModel.ISupportInitialize)pcMember).EndInit();
             ResumeLayout(false);

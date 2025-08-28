@@ -29,237 +29,57 @@
         private void InitializeComponent()
         {
             btnClubBearbeiten = new Button();
-            btnClubBullseyeDecrementF = new Button();
-            btnClubBullseyeDecrementD = new Button();
-            btnClubBullseyeDecrementC = new Button();
-            btnClubBullseyeDecrementB = new Button();
-            btnClubBullseyeDecrementA = new Button();
-            btnClubTrefferDecrementF = new Button();
-            btnClubTrefferDecrementD = new Button();
-            btnClubTrefferDecrementC = new Button();
-            btnClubTrefferDecrementB = new Button();
-            btnClubTrefferDecrementA = new Button();
-            btnClubBullseyeIncrementF = new Button();
-            btnClubBullseyeIncrementD = new Button();
-            btnClubBullseyeIncrementC = new Button();
-            btnClubBullseyeIncrementB = new Button();
-            btnClubBullseyeIncrementA = new Button();
-            btnClubTrefferIncrementF = new Button();
-            btnClubTrefferIncrementD = new Button();
-            btnClubTrefferIncrementC = new Button();
-            btnClubTrefferIncrementB = new Button();
-            btnClubTrefferIncrementA = new Button();
             lblClubInfo = new Label();
             btnClubSpeichern = new Button();
             label8 = new Label();
             label7 = new Label();
-            txtNameFBullseye = new TextBox();
-            txtNameDBullseye = new TextBox();
-            txtNameCBullseye = new TextBox();
-            txtNameBBullseye = new TextBox();
-            txtNameABullseye = new TextBox();
             lblClubName = new Label();
-            txtNameFTreffer = new TextBox();
-            txtNameDTreffer = new TextBox();
-            txtNameCTreffer = new TextBox();
-            txtNameBTreffer = new TextBox();
-            txtNameATreffer = new TextBox();
-            lblClubNameF = new Label();
-            lblClubNameD = new Label();
-            lblClubNameC = new Label();
-            lblClubNameB = new Label();
-            lblClubNameA = new Label();
-            btnClubCancel = new Button();
+            numericUpDown1 = new NumericUpDown();
+            numericUpDown2 = new NumericUpDown();
+            numericUpDown3 = new NumericUpDown();
+            numericUpDown4 = new NumericUpDown();
+            numericUpDown5 = new NumericUpDown();
+            numericUpDown6 = new NumericUpDown();
+            numericUpDown7 = new NumericUpDown();
+            numericUpDown8 = new NumericUpDown();
+            numericUpDown9 = new NumericUpDown();
+            numericUpDown10 = new NumericUpDown();
+            checkBox1 = new CheckBox();
+            checkBox2 = new CheckBox();
+            checkBox3 = new CheckBox();
+            checkBox4 = new CheckBox();
+            checkBox5 = new CheckBox();
+            numericUpDown11 = new NumericUpDown();
+            numericUpDown12 = new NumericUpDown();
+            numericUpDown13 = new NumericUpDown();
+            numericUpDown14 = new NumericUpDown();
+            numericUpDown15 = new NumericUpDown();
+            label10 = new Label();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown11).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown12).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown13).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown14).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown15).BeginInit();
             SuspendLayout();
             // 
             // btnClubBearbeiten
             // 
-            btnClubBearbeiten.Location = new Point(16, 279);
+            btnClubBearbeiten.Location = new Point(12, 398);
             btnClubBearbeiten.Name = "btnClubBearbeiten";
             btnClubBearbeiten.Size = new Size(75, 23);
             btnClubBearbeiten.TabIndex = 87;
             btnClubBearbeiten.Text = "Bearbeiten";
             btnClubBearbeiten.UseVisualStyleBackColor = true;
-            // 
-            // btnClubBullseyeDecrementF
-            // 
-            btnClubBullseyeDecrementF.Location = new Point(432, 237);
-            btnClubBullseyeDecrementF.Name = "btnClubBullseyeDecrementF";
-            btnClubBullseyeDecrementF.Size = new Size(23, 23);
-            btnClubBullseyeDecrementF.TabIndex = 86;
-            btnClubBullseyeDecrementF.Text = "-";
-            btnClubBullseyeDecrementF.UseVisualStyleBackColor = true;
-            // 
-            // btnClubBullseyeDecrementD
-            // 
-            btnClubBullseyeDecrementD.Location = new Point(432, 208);
-            btnClubBullseyeDecrementD.Name = "btnClubBullseyeDecrementD";
-            btnClubBullseyeDecrementD.Size = new Size(23, 23);
-            btnClubBullseyeDecrementD.TabIndex = 85;
-            btnClubBullseyeDecrementD.Text = "-";
-            btnClubBullseyeDecrementD.UseVisualStyleBackColor = true;
-            // 
-            // btnClubBullseyeDecrementC
-            // 
-            btnClubBullseyeDecrementC.Location = new Point(432, 179);
-            btnClubBullseyeDecrementC.Name = "btnClubBullseyeDecrementC";
-            btnClubBullseyeDecrementC.Size = new Size(23, 23);
-            btnClubBullseyeDecrementC.TabIndex = 84;
-            btnClubBullseyeDecrementC.Text = "-";
-            btnClubBullseyeDecrementC.UseVisualStyleBackColor = true;
-            // 
-            // btnClubBullseyeDecrementB
-            // 
-            btnClubBullseyeDecrementB.Location = new Point(432, 149);
-            btnClubBullseyeDecrementB.Name = "btnClubBullseyeDecrementB";
-            btnClubBullseyeDecrementB.Size = new Size(23, 23);
-            btnClubBullseyeDecrementB.TabIndex = 83;
-            btnClubBullseyeDecrementB.Text = "-";
-            btnClubBullseyeDecrementB.UseVisualStyleBackColor = true;
-            // 
-            // btnClubBullseyeDecrementA
-            // 
-            btnClubBullseyeDecrementA.Location = new Point(432, 120);
-            btnClubBullseyeDecrementA.Name = "btnClubBullseyeDecrementA";
-            btnClubBullseyeDecrementA.Size = new Size(23, 23);
-            btnClubBullseyeDecrementA.TabIndex = 82;
-            btnClubBullseyeDecrementA.Text = "-";
-            btnClubBullseyeDecrementA.UseVisualStyleBackColor = true;
-            // 
-            // btnClubTrefferDecrementF
-            // 
-            btnClubTrefferDecrementF.Location = new Point(249, 237);
-            btnClubTrefferDecrementF.Name = "btnClubTrefferDecrementF";
-            btnClubTrefferDecrementF.Size = new Size(23, 23);
-            btnClubTrefferDecrementF.TabIndex = 81;
-            btnClubTrefferDecrementF.Text = "-";
-            btnClubTrefferDecrementF.UseVisualStyleBackColor = true;
-            // 
-            // btnClubTrefferDecrementD
-            // 
-            btnClubTrefferDecrementD.Location = new Point(249, 208);
-            btnClubTrefferDecrementD.Name = "btnClubTrefferDecrementD";
-            btnClubTrefferDecrementD.Size = new Size(23, 23);
-            btnClubTrefferDecrementD.TabIndex = 80;
-            btnClubTrefferDecrementD.Text = "-";
-            btnClubTrefferDecrementD.UseVisualStyleBackColor = true;
-            // 
-            // btnClubTrefferDecrementC
-            // 
-            btnClubTrefferDecrementC.Location = new Point(249, 179);
-            btnClubTrefferDecrementC.Name = "btnClubTrefferDecrementC";
-            btnClubTrefferDecrementC.Size = new Size(23, 23);
-            btnClubTrefferDecrementC.TabIndex = 79;
-            btnClubTrefferDecrementC.Text = "-";
-            btnClubTrefferDecrementC.UseVisualStyleBackColor = true;
-            // 
-            // btnClubTrefferDecrementB
-            // 
-            btnClubTrefferDecrementB.Location = new Point(249, 149);
-            btnClubTrefferDecrementB.Name = "btnClubTrefferDecrementB";
-            btnClubTrefferDecrementB.Size = new Size(23, 23);
-            btnClubTrefferDecrementB.TabIndex = 78;
-            btnClubTrefferDecrementB.Text = "-";
-            btnClubTrefferDecrementB.UseVisualStyleBackColor = true;
-            // 
-            // btnClubTrefferDecrementA
-            // 
-            btnClubTrefferDecrementA.Location = new Point(249, 120);
-            btnClubTrefferDecrementA.Name = "btnClubTrefferDecrementA";
-            btnClubTrefferDecrementA.Size = new Size(23, 23);
-            btnClubTrefferDecrementA.TabIndex = 77;
-            btnClubTrefferDecrementA.Text = "-";
-            btnClubTrefferDecrementA.UseVisualStyleBackColor = true;
-            // 
-            // btnClubBullseyeIncrementF
-            // 
-            btnClubBullseyeIncrementF.Location = new Point(297, 236);
-            btnClubBullseyeIncrementF.Name = "btnClubBullseyeIncrementF";
-            btnClubBullseyeIncrementF.Size = new Size(23, 23);
-            btnClubBullseyeIncrementF.TabIndex = 76;
-            btnClubBullseyeIncrementF.Text = "+";
-            btnClubBullseyeIncrementF.UseVisualStyleBackColor = true;
-            // 
-            // btnClubBullseyeIncrementD
-            // 
-            btnClubBullseyeIncrementD.Location = new Point(297, 207);
-            btnClubBullseyeIncrementD.Name = "btnClubBullseyeIncrementD";
-            btnClubBullseyeIncrementD.Size = new Size(23, 23);
-            btnClubBullseyeIncrementD.TabIndex = 75;
-            btnClubBullseyeIncrementD.Text = "+";
-            btnClubBullseyeIncrementD.UseVisualStyleBackColor = true;
-            // 
-            // btnClubBullseyeIncrementC
-            // 
-            btnClubBullseyeIncrementC.Location = new Point(297, 178);
-            btnClubBullseyeIncrementC.Name = "btnClubBullseyeIncrementC";
-            btnClubBullseyeIncrementC.Size = new Size(23, 23);
-            btnClubBullseyeIncrementC.TabIndex = 74;
-            btnClubBullseyeIncrementC.Text = "+";
-            btnClubBullseyeIncrementC.UseVisualStyleBackColor = true;
-            // 
-            // btnClubBullseyeIncrementB
-            // 
-            btnClubBullseyeIncrementB.Location = new Point(297, 148);
-            btnClubBullseyeIncrementB.Name = "btnClubBullseyeIncrementB";
-            btnClubBullseyeIncrementB.Size = new Size(23, 23);
-            btnClubBullseyeIncrementB.TabIndex = 73;
-            btnClubBullseyeIncrementB.Text = "+";
-            btnClubBullseyeIncrementB.UseVisualStyleBackColor = true;
-            // 
-            // btnClubBullseyeIncrementA
-            // 
-            btnClubBullseyeIncrementA.Location = new Point(297, 119);
-            btnClubBullseyeIncrementA.Name = "btnClubBullseyeIncrementA";
-            btnClubBullseyeIncrementA.Size = new Size(23, 23);
-            btnClubBullseyeIncrementA.TabIndex = 72;
-            btnClubBullseyeIncrementA.Text = "+";
-            btnClubBullseyeIncrementA.UseVisualStyleBackColor = true;
-            // 
-            // btnClubTrefferIncrementF
-            // 
-            btnClubTrefferIncrementF.Location = new Point(114, 237);
-            btnClubTrefferIncrementF.Name = "btnClubTrefferIncrementF";
-            btnClubTrefferIncrementF.Size = new Size(23, 23);
-            btnClubTrefferIncrementF.TabIndex = 71;
-            btnClubTrefferIncrementF.Text = "+";
-            btnClubTrefferIncrementF.UseVisualStyleBackColor = true;
-            // 
-            // btnClubTrefferIncrementD
-            // 
-            btnClubTrefferIncrementD.Location = new Point(114, 208);
-            btnClubTrefferIncrementD.Name = "btnClubTrefferIncrementD";
-            btnClubTrefferIncrementD.Size = new Size(23, 23);
-            btnClubTrefferIncrementD.TabIndex = 70;
-            btnClubTrefferIncrementD.Text = "+";
-            btnClubTrefferIncrementD.UseVisualStyleBackColor = true;
-            // 
-            // btnClubTrefferIncrementC
-            // 
-            btnClubTrefferIncrementC.Location = new Point(114, 179);
-            btnClubTrefferIncrementC.Name = "btnClubTrefferIncrementC";
-            btnClubTrefferIncrementC.Size = new Size(23, 23);
-            btnClubTrefferIncrementC.TabIndex = 69;
-            btnClubTrefferIncrementC.Text = "+";
-            btnClubTrefferIncrementC.UseVisualStyleBackColor = true;
-            // 
-            // btnClubTrefferIncrementB
-            // 
-            btnClubTrefferIncrementB.Location = new Point(114, 149);
-            btnClubTrefferIncrementB.Name = "btnClubTrefferIncrementB";
-            btnClubTrefferIncrementB.Size = new Size(23, 23);
-            btnClubTrefferIncrementB.TabIndex = 68;
-            btnClubTrefferIncrementB.Text = "+";
-            btnClubTrefferIncrementB.UseVisualStyleBackColor = true;
-            // 
-            // btnClubTrefferIncrementA
-            // 
-            btnClubTrefferIncrementA.Location = new Point(114, 120);
-            btnClubTrefferIncrementA.Name = "btnClubTrefferIncrementA";
-            btnClubTrefferIncrementA.Size = new Size(23, 23);
-            btnClubTrefferIncrementA.TabIndex = 67;
-            btnClubTrefferIncrementA.Text = "+";
-            btnClubTrefferIncrementA.UseVisualStyleBackColor = true;
             // 
             // lblClubInfo
             // 
@@ -272,70 +92,31 @@
             // 
             // btnClubSpeichern
             // 
-            btnClubSpeichern.Location = new Point(97, 279);
+            btnClubSpeichern.Location = new Point(93, 398);
             btnClubSpeichern.Name = "btnClubSpeichern";
-            btnClubSpeichern.Size = new Size(277, 23);
+            btnClubSpeichern.Size = new Size(357, 23);
             btnClubSpeichern.TabIndex = 65;
             btnClubSpeichern.Text = "Speichern";
             btnClubSpeichern.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(354, 102);
+            label8.Location = new Point(335, 218);
             label8.Name = "label8";
-            label8.Size = new Size(50, 15);
+            label8.Size = new Size(115, 15);
             label8.TabIndex = 64;
             label8.Text = "Bullseye";
+            label8.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(164, 102);
+            label7.BackColor = SystemColors.Control;
+            label7.Location = new Point(217, 218);
             label7.Name = "label7";
-            label7.Size = new Size(61, 15);
+            label7.Size = new Size(115, 15);
             label7.TabIndex = 63;
             label7.Text = "420 Treffer";
-            // 
-            // txtNameFBullseye
-            // 
-            txtNameFBullseye.Location = new Point(326, 237);
-            txtNameFBullseye.Name = "txtNameFBullseye";
-            txtNameFBullseye.Size = new Size(100, 23);
-            txtNameFBullseye.TabIndex = 62;
-            txtNameFBullseye.TextAlign = HorizontalAlignment.Center;
-            // 
-            // txtNameDBullseye
-            // 
-            txtNameDBullseye.Location = new Point(326, 208);
-            txtNameDBullseye.Name = "txtNameDBullseye";
-            txtNameDBullseye.Size = new Size(100, 23);
-            txtNameDBullseye.TabIndex = 61;
-            txtNameDBullseye.TextAlign = HorizontalAlignment.Center;
-            // 
-            // txtNameCBullseye
-            // 
-            txtNameCBullseye.Location = new Point(326, 179);
-            txtNameCBullseye.Name = "txtNameCBullseye";
-            txtNameCBullseye.Size = new Size(100, 23);
-            txtNameCBullseye.TabIndex = 60;
-            txtNameCBullseye.TextAlign = HorizontalAlignment.Center;
-            // 
-            // txtNameBBullseye
-            // 
-            txtNameBBullseye.Location = new Point(326, 149);
-            txtNameBBullseye.Name = "txtNameBBullseye";
-            txtNameBBullseye.Size = new Size(100, 23);
-            txtNameBBullseye.TabIndex = 59;
-            txtNameBBullseye.TextAlign = HorizontalAlignment.Center;
-            // 
-            // txtNameABullseye
-            // 
-            txtNameABullseye.Location = new Point(326, 120);
-            txtNameABullseye.Name = "txtNameABullseye";
-            txtNameABullseye.Size = new Size(100, 23);
-            txtNameABullseye.TabIndex = 58;
-            txtNameABullseye.TextAlign = HorizontalAlignment.Center;
+            label7.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblClubName
             // 
@@ -347,152 +128,268 @@
             lblClubName.TabIndex = 57;
             lblClubName.Text = "Club Name";
             // 
-            // txtNameFTreffer
+            // numericUpDown1
             // 
-            txtNameFTreffer.Location = new Point(143, 237);
-            txtNameFTreffer.Name = "txtNameFTreffer";
-            txtNameFTreffer.Size = new Size(100, 23);
-            txtNameFTreffer.TabIndex = 56;
-            txtNameFTreffer.TextAlign = HorizontalAlignment.Center;
+            numericUpDown1.BorderStyle = BorderStyle.FixedSingle;
+            numericUpDown1.Hexadecimal = true;
+            numericUpDown1.Location = new Point(217, 236);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(115, 23);
+            numericUpDown1.TabIndex = 96;
+            numericUpDown1.TextAlign = HorizontalAlignment.Center;
             // 
-            // txtNameDTreffer
+            // numericUpDown2
             // 
-            txtNameDTreffer.Location = new Point(143, 208);
-            txtNameDTreffer.Name = "txtNameDTreffer";
-            txtNameDTreffer.Size = new Size(100, 23);
-            txtNameDTreffer.TabIndex = 55;
-            txtNameDTreffer.TextAlign = HorizontalAlignment.Center;
+            numericUpDown2.BorderStyle = BorderStyle.FixedSingle;
+            numericUpDown2.Hexadecimal = true;
+            numericUpDown2.Location = new Point(217, 265);
+            numericUpDown2.Name = "numericUpDown2";
+            numericUpDown2.Size = new Size(115, 23);
+            numericUpDown2.TabIndex = 97;
+            numericUpDown2.TextAlign = HorizontalAlignment.Center;
             // 
-            // txtNameCTreffer
+            // numericUpDown3
             // 
-            txtNameCTreffer.Location = new Point(143, 179);
-            txtNameCTreffer.Name = "txtNameCTreffer";
-            txtNameCTreffer.Size = new Size(100, 23);
-            txtNameCTreffer.TabIndex = 54;
-            txtNameCTreffer.TextAlign = HorizontalAlignment.Center;
+            numericUpDown3.BorderStyle = BorderStyle.FixedSingle;
+            numericUpDown3.Hexadecimal = true;
+            numericUpDown3.Location = new Point(217, 295);
+            numericUpDown3.Name = "numericUpDown3";
+            numericUpDown3.Size = new Size(115, 23);
+            numericUpDown3.TabIndex = 98;
+            numericUpDown3.TextAlign = HorizontalAlignment.Center;
             // 
-            // txtNameBTreffer
+            // numericUpDown4
             // 
-            txtNameBTreffer.Location = new Point(143, 149);
-            txtNameBTreffer.Name = "txtNameBTreffer";
-            txtNameBTreffer.Size = new Size(100, 23);
-            txtNameBTreffer.TabIndex = 53;
-            txtNameBTreffer.TextAlign = HorizontalAlignment.Center;
+            numericUpDown4.BorderStyle = BorderStyle.FixedSingle;
+            numericUpDown4.Hexadecimal = true;
+            numericUpDown4.Location = new Point(217, 324);
+            numericUpDown4.Name = "numericUpDown4";
+            numericUpDown4.Size = new Size(115, 23);
+            numericUpDown4.TabIndex = 99;
+            numericUpDown4.TextAlign = HorizontalAlignment.Center;
             // 
-            // txtNameATreffer
+            // numericUpDown5
             // 
-            txtNameATreffer.Location = new Point(143, 120);
-            txtNameATreffer.Name = "txtNameATreffer";
-            txtNameATreffer.Size = new Size(100, 23);
-            txtNameATreffer.TabIndex = 52;
-            txtNameATreffer.TextAlign = HorizontalAlignment.Center;
+            numericUpDown5.BorderStyle = BorderStyle.FixedSingle;
+            numericUpDown5.Hexadecimal = true;
+            numericUpDown5.Location = new Point(217, 353);
+            numericUpDown5.Name = "numericUpDown5";
+            numericUpDown5.Size = new Size(115, 23);
+            numericUpDown5.TabIndex = 100;
+            numericUpDown5.TextAlign = HorizontalAlignment.Center;
             // 
-            // lblClubNameF
+            // numericUpDown6
             // 
-            lblClubNameF.AutoSize = true;
-            lblClubNameF.Location = new Point(16, 240);
-            lblClubNameF.Name = "lblClubNameF";
-            lblClubNameF.Size = new Size(48, 15);
-            lblClubNameF.TabIndex = 51;
-            lblClubNameF.Text = "Name 5";
+            numericUpDown6.BorderStyle = BorderStyle.FixedSingle;
+            numericUpDown6.Hexadecimal = true;
+            numericUpDown6.Location = new Point(335, 236);
+            numericUpDown6.Name = "numericUpDown6";
+            numericUpDown6.Size = new Size(115, 23);
+            numericUpDown6.TabIndex = 101;
+            numericUpDown6.TextAlign = HorizontalAlignment.Center;
             // 
-            // lblClubNameD
+            // numericUpDown7
             // 
-            lblClubNameD.AutoSize = true;
-            lblClubNameD.Location = new Point(16, 211);
-            lblClubNameD.Name = "lblClubNameD";
-            lblClubNameD.Size = new Size(48, 15);
-            lblClubNameD.TabIndex = 50;
-            lblClubNameD.Text = "Name 4";
+            numericUpDown7.BorderStyle = BorderStyle.FixedSingle;
+            numericUpDown7.Hexadecimal = true;
+            numericUpDown7.Location = new Point(335, 265);
+            numericUpDown7.Name = "numericUpDown7";
+            numericUpDown7.Size = new Size(115, 23);
+            numericUpDown7.TabIndex = 102;
+            numericUpDown7.TextAlign = HorizontalAlignment.Center;
             // 
-            // lblClubNameC
+            // numericUpDown8
             // 
-            lblClubNameC.AutoSize = true;
-            lblClubNameC.Location = new Point(16, 182);
-            lblClubNameC.Name = "lblClubNameC";
-            lblClubNameC.Size = new Size(48, 15);
-            lblClubNameC.TabIndex = 49;
-            lblClubNameC.Text = "Name 3";
+            numericUpDown8.BorderStyle = BorderStyle.FixedSingle;
+            numericUpDown8.Hexadecimal = true;
+            numericUpDown8.Location = new Point(335, 295);
+            numericUpDown8.Name = "numericUpDown8";
+            numericUpDown8.Size = new Size(115, 23);
+            numericUpDown8.TabIndex = 103;
+            numericUpDown8.TextAlign = HorizontalAlignment.Center;
             // 
-            // lblClubNameB
+            // numericUpDown9
             // 
-            lblClubNameB.AutoSize = true;
-            lblClubNameB.Location = new Point(16, 152);
-            lblClubNameB.Name = "lblClubNameB";
-            lblClubNameB.Size = new Size(48, 15);
-            lblClubNameB.TabIndex = 48;
-            lblClubNameB.Text = "Name 2";
+            numericUpDown9.BorderStyle = BorderStyle.FixedSingle;
+            numericUpDown9.Hexadecimal = true;
+            numericUpDown9.Location = new Point(335, 324);
+            numericUpDown9.Name = "numericUpDown9";
+            numericUpDown9.Size = new Size(115, 23);
+            numericUpDown9.TabIndex = 104;
+            numericUpDown9.TextAlign = HorizontalAlignment.Center;
             // 
-            // lblClubNameA
+            // numericUpDown10
             // 
-            lblClubNameA.AutoSize = true;
-            lblClubNameA.Location = new Point(16, 123);
-            lblClubNameA.Name = "lblClubNameA";
-            lblClubNameA.Size = new Size(48, 15);
-            lblClubNameA.TabIndex = 47;
-            lblClubNameA.Text = "Name 1";
+            numericUpDown10.BorderStyle = BorderStyle.FixedSingle;
+            numericUpDown10.Hexadecimal = true;
+            numericUpDown10.Location = new Point(335, 353);
+            numericUpDown10.Name = "numericUpDown10";
+            numericUpDown10.Size = new Size(115, 23);
+            numericUpDown10.TabIndex = 105;
+            numericUpDown10.TextAlign = HorizontalAlignment.Center;
             // 
-            // btnClubCancel
+            // checkBox1
             // 
-            btnClubCancel.Location = new Point(380, 279);
-            btnClubCancel.Name = "btnClubCancel";
-            btnClubCancel.Size = new Size(75, 23);
-            btnClubCancel.TabIndex = 88;
-            btnClubCancel.Text = "Schliesen";
-            btnClubCancel.UseVisualStyleBackColor = true;
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(13, 237);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(69, 19);
+            checkBox1.TabIndex = 107;
+            checkBox1.Text = "Name A";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            checkBox2.AutoSize = true;
+            checkBox2.Location = new Point(13, 266);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(68, 19);
+            checkBox2.TabIndex = 108;
+            checkBox2.Text = "Name B";
+            checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            checkBox3.AutoSize = true;
+            checkBox3.Location = new Point(13, 296);
+            checkBox3.Name = "checkBox3";
+            checkBox3.Size = new Size(69, 19);
+            checkBox3.TabIndex = 109;
+            checkBox3.Text = "Name C";
+            checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            checkBox4.AutoSize = true;
+            checkBox4.Location = new Point(13, 325);
+            checkBox4.Name = "checkBox4";
+            checkBox4.Size = new Size(69, 19);
+            checkBox4.TabIndex = 110;
+            checkBox4.Text = "Name D";
+            checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            checkBox5.AutoSize = true;
+            checkBox5.Location = new Point(13, 354);
+            checkBox5.Name = "checkBox5";
+            checkBox5.Size = new Size(67, 19);
+            checkBox5.TabIndex = 111;
+            checkBox5.Text = "Name F";
+            checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDown11
+            // 
+            numericUpDown11.BorderStyle = BorderStyle.FixedSingle;
+            numericUpDown11.Hexadecimal = true;
+            numericUpDown11.Location = new Point(96, 353);
+            numericUpDown11.Name = "numericUpDown11";
+            numericUpDown11.Size = new Size(115, 23);
+            numericUpDown11.TabIndex = 123;
+            numericUpDown11.TextAlign = HorizontalAlignment.Center;
+            // 
+            // numericUpDown12
+            // 
+            numericUpDown12.BorderStyle = BorderStyle.FixedSingle;
+            numericUpDown12.Hexadecimal = true;
+            numericUpDown12.Location = new Point(96, 324);
+            numericUpDown12.Name = "numericUpDown12";
+            numericUpDown12.Size = new Size(115, 23);
+            numericUpDown12.TabIndex = 122;
+            numericUpDown12.TextAlign = HorizontalAlignment.Center;
+            // 
+            // numericUpDown13
+            // 
+            numericUpDown13.BorderStyle = BorderStyle.FixedSingle;
+            numericUpDown13.Hexadecimal = true;
+            numericUpDown13.Location = new Point(96, 295);
+            numericUpDown13.Name = "numericUpDown13";
+            numericUpDown13.Size = new Size(115, 23);
+            numericUpDown13.TabIndex = 121;
+            numericUpDown13.TextAlign = HorizontalAlignment.Center;
+            // 
+            // numericUpDown14
+            // 
+            numericUpDown14.BorderStyle = BorderStyle.FixedSingle;
+            numericUpDown14.Hexadecimal = true;
+            numericUpDown14.Location = new Point(96, 265);
+            numericUpDown14.Name = "numericUpDown14";
+            numericUpDown14.Size = new Size(115, 23);
+            numericUpDown14.TabIndex = 120;
+            numericUpDown14.TextAlign = HorizontalAlignment.Center;
+            // 
+            // numericUpDown15
+            // 
+            numericUpDown15.BorderStyle = BorderStyle.FixedSingle;
+            numericUpDown15.Hexadecimal = true;
+            numericUpDown15.Location = new Point(96, 236);
+            numericUpDown15.Name = "numericUpDown15";
+            numericUpDown15.Size = new Size(115, 23);
+            numericUpDown15.TabIndex = 119;
+            numericUpDown15.TextAlign = HorizontalAlignment.Center;
+            // 
+            // label10
+            // 
+            label10.BackColor = SystemColors.Control;
+            label10.Location = new Point(96, 218);
+            label10.Name = "label10";
+            label10.Size = new Size(115, 15);
+            label10.TabIndex = 118;
+            label10.Text = "Spiele";
+            label10.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // frmClubStatistik
             // 
             AcceptButton = btnClubSpeichern;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            CancelButton = btnClubCancel;
-            ClientSize = new Size(469, 316);
-            Controls.Add(btnClubCancel);
+            ClientSize = new Size(463, 433);
+            Controls.Add(numericUpDown11);
+            Controls.Add(numericUpDown12);
+            Controls.Add(numericUpDown13);
+            Controls.Add(numericUpDown14);
+            Controls.Add(numericUpDown15);
+            Controls.Add(label10);
+            Controls.Add(checkBox5);
+            Controls.Add(checkBox4);
+            Controls.Add(checkBox3);
+            Controls.Add(checkBox2);
+            Controls.Add(checkBox1);
+            Controls.Add(numericUpDown10);
+            Controls.Add(numericUpDown9);
+            Controls.Add(numericUpDown8);
+            Controls.Add(numericUpDown7);
+            Controls.Add(numericUpDown6);
+            Controls.Add(numericUpDown5);
+            Controls.Add(numericUpDown4);
+            Controls.Add(numericUpDown3);
+            Controls.Add(numericUpDown2);
+            Controls.Add(numericUpDown1);
             Controls.Add(btnClubBearbeiten);
-            Controls.Add(btnClubBullseyeDecrementF);
-            Controls.Add(btnClubBullseyeDecrementD);
-            Controls.Add(btnClubBullseyeDecrementC);
-            Controls.Add(btnClubBullseyeDecrementB);
-            Controls.Add(btnClubBullseyeDecrementA);
-            Controls.Add(btnClubTrefferDecrementF);
-            Controls.Add(btnClubTrefferDecrementD);
-            Controls.Add(btnClubTrefferDecrementC);
-            Controls.Add(btnClubTrefferDecrementB);
-            Controls.Add(btnClubTrefferDecrementA);
-            Controls.Add(btnClubBullseyeIncrementF);
-            Controls.Add(btnClubBullseyeIncrementD);
-            Controls.Add(btnClubBullseyeIncrementC);
-            Controls.Add(btnClubBullseyeIncrementB);
-            Controls.Add(btnClubBullseyeIncrementA);
-            Controls.Add(btnClubTrefferIncrementF);
-            Controls.Add(btnClubTrefferIncrementD);
-            Controls.Add(btnClubTrefferIncrementC);
-            Controls.Add(btnClubTrefferIncrementB);
-            Controls.Add(btnClubTrefferIncrementA);
             Controls.Add(lblClubInfo);
             Controls.Add(btnClubSpeichern);
             Controls.Add(label8);
             Controls.Add(label7);
-            Controls.Add(txtNameFBullseye);
-            Controls.Add(txtNameDBullseye);
-            Controls.Add(txtNameCBullseye);
-            Controls.Add(txtNameBBullseye);
-            Controls.Add(txtNameABullseye);
             Controls.Add(lblClubName);
-            Controls.Add(txtNameFTreffer);
-            Controls.Add(txtNameDTreffer);
-            Controls.Add(txtNameCTreffer);
-            Controls.Add(txtNameBTreffer);
-            Controls.Add(txtNameATreffer);
-            Controls.Add(lblClubNameF);
-            Controls.Add(lblClubNameD);
-            Controls.Add(lblClubNameC);
-            Controls.Add(lblClubNameB);
-            Controls.Add(lblClubNameA);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "frmClubStatistik";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Club Statistiken";
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown11).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown12).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown13).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown14).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown15).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -500,46 +397,31 @@
         #endregion
 
         private Button btnClubBearbeiten;
-        private Button btnClubBullseyeDecrementF;
-        private Button btnClubBullseyeDecrementD;
-        private Button btnClubBullseyeDecrementC;
-        private Button btnClubBullseyeDecrementB;
-        private Button btnClubBullseyeDecrementA;
-        private Button btnClubTrefferDecrementF;
-        private Button btnClubTrefferDecrementD;
-        private Button btnClubTrefferDecrementC;
-        private Button btnClubTrefferDecrementB;
-        private Button btnClubTrefferDecrementA;
-        private Button btnClubBullseyeIncrementF;
-        private Button btnClubBullseyeIncrementD;
-        private Button btnClubBullseyeIncrementC;
-        private Button btnClubBullseyeIncrementB;
-        private Button btnClubBullseyeIncrementA;
-        private Button btnClubTrefferIncrementF;
-        private Button btnClubTrefferIncrementD;
-        private Button btnClubTrefferIncrementC;
-        private Button btnClubTrefferIncrementB;
-        private Button btnClubTrefferIncrementA;
         private Label lblClubInfo;
         private Button btnClubSpeichern;
         private Label label8;
         private Label label7;
-        private TextBox txtNameFBullseye;
-        private TextBox txtNameDBullseye;
-        private TextBox txtNameCBullseye;
-        private TextBox txtNameBBullseye;
-        private TextBox txtNameABullseye;
         private Label lblClubName;
-        private TextBox txtNameFTreffer;
-        private TextBox txtNameDTreffer;
-        private TextBox txtNameCTreffer;
-        private TextBox txtNameBTreffer;
-        private TextBox txtNameATreffer;
-        private Label lblClubNameF;
-        private Label lblClubNameD;
-        private Label lblClubNameC;
-        private Label lblClubNameB;
-        private Label lblClubNameA;
-        private Button btnClubCancel;
+        private NumericUpDown numericUpDown1;
+        private NumericUpDown numericUpDown2;
+        private NumericUpDown numericUpDown3;
+        private NumericUpDown numericUpDown4;
+        private NumericUpDown numericUpDown5;
+        private NumericUpDown numericUpDown6;
+        private NumericUpDown numericUpDown7;
+        private NumericUpDown numericUpDown8;
+        private NumericUpDown numericUpDown9;
+        private NumericUpDown numericUpDown10;
+        private CheckBox checkBox1;
+        private CheckBox checkBox2;
+        private CheckBox checkBox3;
+        private CheckBox checkBox4;
+        private CheckBox checkBox5;
+        private NumericUpDown numericUpDown11;
+        private NumericUpDown numericUpDown12;
+        private NumericUpDown numericUpDown13;
+        private NumericUpDown numericUpDown14;
+        private NumericUpDown numericUpDown15;
+        private Label label10;
     }
 }
