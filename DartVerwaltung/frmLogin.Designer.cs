@@ -36,11 +36,12 @@
             mtxtLoginPasswort = new MaskedTextBox();
             mtxtLoginPasswortConfirm = new MaskedTextBox();
             btnLoginRegistry = new Button();
+            btnLoginCancel = new Button();
             SuspendLayout();
             // 
             // btnLoginButton
             // 
-            btnLoginButton.Location = new Point(149, 350);
+            btnLoginButton.Location = new Point(149, 339);
             btnLoginButton.Name = "btnLoginButton";
             btnLoginButton.Size = new Size(150, 23);
             btnLoginButton.TabIndex = 0;
@@ -100,7 +101,7 @@
             // 
             // btnLoginRegistry
             // 
-            btnLoginRegistry.Location = new Point(149, 379);
+            btnLoginRegistry.Location = new Point(149, 368);
             btnLoginRegistry.Name = "btnLoginRegistry";
             btnLoginRegistry.Size = new Size(150, 23);
             btnLoginRegistry.TabIndex = 9;
@@ -108,11 +109,23 @@
             btnLoginRegistry.UseVisualStyleBackColor = true;
             btnLoginRegistry.Click += btnLoginRegistry_Click;
             // 
+            // btnLoginCancel
+            // 
+            btnLoginCancel.Location = new Point(149, 397);
+            btnLoginCancel.Name = "btnLoginCancel";
+            btnLoginCancel.Size = new Size(150, 23);
+            btnLoginCancel.TabIndex = 10;
+            btnLoginCancel.Text = "Schliesen";
+            btnLoginCancel.UseVisualStyleBackColor = true;
+            // 
             // frmLogin
             // 
+            AcceptButton = btnLoginButton;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            CancelButton = btnLoginCancel;
             ClientSize = new Size(463, 433);
+            Controls.Add(btnLoginCancel);
             Controls.Add(btnLoginRegistry);
             Controls.Add(mtxtLoginPasswortConfirm);
             Controls.Add(mtxtLoginPasswort);
@@ -139,5 +152,6 @@
         private MaskedTextBox mtxtLoginPasswort;
         private MaskedTextBox mtxtLoginPasswortConfirm;
         private Button btnLoginRegistry;
+        private Button btnLoginCancel;
     }
 }

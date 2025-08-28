@@ -222,13 +222,19 @@ namespace DartVerwaltung
                 {
                     for (int col = 0; col < dgv.Columns.Count; col++)
                     {
-                        if (col > 0) sw.Write(";"); 
+                        if (col > 0) sw.Write(";");
                         var val = dgv.Rows[row].Cells[col].Value;
                         sw.Write(val != null ? val?.ToString()?.Replace(',', ' ').Replace("\n", " ") : "");
                     }
                     sw.WriteLine();
                 }
             }
+        }
+
+        private void btnStartseiteSpielen_Click(object sender, EventArgs e)
+        {
+            frmPlayTime frmPlayTimes = new frmPlayTime();
+            frmPlayTimes.ShowDialog();
         }
     }
 }

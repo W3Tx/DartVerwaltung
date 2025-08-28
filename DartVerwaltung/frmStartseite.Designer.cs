@@ -68,6 +68,7 @@
             txtStartseiteAlterVon = new TextBox();
             label7 = new Label();
             label8 = new Label();
+            btnStartseiteSpielen = new Button();
             ((System.ComponentModel.ISupportInitialize)dgMemberListe).BeginInit();
             ((System.ComponentModel.ISupportInitialize)memberBindingSource3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)memberBindingSource2).BeginInit();
@@ -380,11 +381,22 @@
             label8.TabIndex = 71;
             label8.Text = "Filterung";
             // 
+            // btnStartseiteSpielen
+            // 
+            btnStartseiteSpielen.Location = new Point(865, 12);
+            btnStartseiteSpielen.Name = "btnStartseiteSpielen";
+            btnStartseiteSpielen.Size = new Size(75, 23);
+            btnStartseiteSpielen.TabIndex = 72;
+            btnStartseiteSpielen.Text = "Spielen";
+            btnStartseiteSpielen.UseVisualStyleBackColor = true;
+            btnStartseiteSpielen.Click += btnStartseiteSpielen_Click;
+            // 
             // frmStartseite
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1066, 433);
+            Controls.Add(btnStartseiteSpielen);
             Controls.Add(label8);
             Controls.Add(label6);
             Controls.Add(txtStartseiteAlterBis);
@@ -462,5 +474,6 @@
         private TextBox txtStartseiteAlterVon;
         private Label label7;
         private Label label8;
+        private Button btnStartseiteSpielen;
     }
 }
