@@ -35,92 +35,97 @@
             lblUebersichtNameC = new Label();
             lblUebersichtNameD = new Label();
             btnUebersichtSpielen = new Button();
-            lblUebersichtFinalNameA = new Label();
+            lblUebersichtFinalNameB = new Label();
             btnClubCancel = new Button();
             label1 = new Label();
             btnPlayShuffle = new Button();
+            lblUebersichtRundeCNameA = new Label();
+            lblUebersichtRundeCNameB = new Label();
+            lblUebersichtFinalNameC = new Label();
             SuspendLayout();
             // 
             // lblUebersichtNameA
             // 
-            lblUebersichtNameA.AutoSize = true;
             lblUebersichtNameA.BackColor = SystemColors.ActiveCaption;
             lblUebersichtNameA.BorderStyle = BorderStyle.FixedSingle;
             lblUebersichtNameA.ForeColor = SystemColors.Control;
-            lblUebersichtNameA.Location = new Point(11, 110);
+            lblUebersichtNameA.Location = new Point(330, 71);
             lblUebersichtNameA.Name = "lblUebersichtNameA";
             lblUebersichtNameA.Padding = new Padding(20, 10, 20, 10);
-            lblUebersichtNameA.Size = new Size(92, 37);
+            lblUebersichtNameA.Size = new Size(140, 40);
             lblUebersichtNameA.TabIndex = 126;
             lblUebersichtNameA.Text = "Name A";
+            lblUebersichtNameA.TextAlign = ContentAlignment.MiddleCenter;
             lblUebersichtNameA.MouseDoubleClick += lblUebersichtNameA_MouseDoubleClick;
             // 
             // lblUebersichtRundeBNameA
             // 
-            lblUebersichtRundeBNameA.AutoSize = true;
             lblUebersichtRundeBNameA.BackColor = SystemColors.ActiveCaption;
             lblUebersichtRundeBNameA.BorderStyle = BorderStyle.FixedSingle;
             lblUebersichtRundeBNameA.ForeColor = SystemColors.Control;
-            lblUebersichtRundeBNameA.Location = new Point(163, 148);
+            lblUebersichtRundeBNameA.Location = new Point(511, 108);
             lblUebersichtRundeBNameA.Name = "lblUebersichtRundeBNameA";
             lblUebersichtRundeBNameA.Padding = new Padding(20, 10, 20, 10);
-            lblUebersichtRundeBNameA.Size = new Size(139, 37);
+            lblUebersichtRundeBNameA.Size = new Size(140, 40);
             lblUebersichtRundeBNameA.TabIndex = 125;
             lblUebersichtRundeBNameA.Text = "Runde B Name A";
+            lblUebersichtRundeBNameA.TextAlign = ContentAlignment.MiddleCenter;
+            lblUebersichtRundeBNameA.MouseDoubleClick += lblUebersichtRundeBNameA_MouseDoubleClick;
             // 
             // lblUebersichtNameB
             // 
-            lblUebersichtNameB.AutoSize = true;
             lblUebersichtNameB.BackColor = SystemColors.ActiveCaption;
             lblUebersichtNameB.BorderStyle = BorderStyle.FixedSingle;
             lblUebersichtNameB.ForeColor = SystemColors.Control;
-            lblUebersichtNameB.Location = new Point(12, 184);
+            lblUebersichtNameB.Location = new Point(331, 145);
             lblUebersichtNameB.Name = "lblUebersichtNameB";
             lblUebersichtNameB.Padding = new Padding(20, 10, 20, 10);
-            lblUebersichtNameB.Size = new Size(91, 37);
+            lblUebersichtNameB.Size = new Size(140, 40);
             lblUebersichtNameB.TabIndex = 124;
             lblUebersichtNameB.Text = "Name B";
+            lblUebersichtNameB.TextAlign = ContentAlignment.MiddleCenter;
             lblUebersichtNameB.MouseDoubleClick += lblUebersichtNameB_MouseDoubleClick;
             // 
             // lblUebersichtRundeBNameB
             // 
-            lblUebersichtRundeBNameB.AutoSize = true;
             lblUebersichtRundeBNameB.BackColor = SystemColors.ActiveCaption;
             lblUebersichtRundeBNameB.BorderStyle = BorderStyle.FixedSingle;
             lblUebersichtRundeBNameB.ForeColor = SystemColors.Control;
-            lblUebersichtRundeBNameB.Location = new Point(163, 308);
+            lblUebersichtRundeBNameB.Location = new Point(502, 277);
             lblUebersichtRundeBNameB.Name = "lblUebersichtRundeBNameB";
             lblUebersichtRundeBNameB.Padding = new Padding(20, 10, 20, 10);
-            lblUebersichtRundeBNameB.Size = new Size(138, 37);
+            lblUebersichtRundeBNameB.Size = new Size(140, 40);
             lblUebersichtRundeBNameB.TabIndex = 123;
             lblUebersichtRundeBNameB.Text = "Runde B Name B";
+            lblUebersichtRundeBNameB.TextAlign = ContentAlignment.MiddleCenter;
+            lblUebersichtRundeBNameB.MouseDoubleClick += lblUebersichtRundeBNameB_MouseDoubleClick;
             // 
             // lblUebersichtNameC
             // 
-            lblUebersichtNameC.AutoSize = true;
             lblUebersichtNameC.BackColor = SystemColors.ActiveCaption;
             lblUebersichtNameC.BorderStyle = BorderStyle.FixedSingle;
             lblUebersichtNameC.ForeColor = SystemColors.Control;
-            lblUebersichtNameC.Location = new Point(12, 274);
+            lblUebersichtNameC.Location = new Point(331, 235);
             lblUebersichtNameC.Name = "lblUebersichtNameC";
             lblUebersichtNameC.Padding = new Padding(20, 10, 20, 10);
-            lblUebersichtNameC.Size = new Size(92, 37);
+            lblUebersichtNameC.Size = new Size(140, 40);
             lblUebersichtNameC.TabIndex = 122;
             lblUebersichtNameC.Text = "Name C";
+            lblUebersichtNameC.TextAlign = ContentAlignment.MiddleCenter;
             lblUebersichtNameC.MouseDoubleClick += lblUebersichtNameC_MouseDoubleClick;
             // 
             // lblUebersichtNameD
             // 
-            lblUebersichtNameD.AutoSize = true;
             lblUebersichtNameD.BackColor = SystemColors.ActiveCaption;
             lblUebersichtNameD.BorderStyle = BorderStyle.FixedSingle;
             lblUebersichtNameD.ForeColor = SystemColors.Control;
-            lblUebersichtNameD.Location = new Point(12, 343);
+            lblUebersichtNameD.Location = new Point(331, 304);
             lblUebersichtNameD.Name = "lblUebersichtNameD";
             lblUebersichtNameD.Padding = new Padding(20, 10, 20, 10);
-            lblUebersichtNameD.Size = new Size(92, 37);
+            lblUebersichtNameD.Size = new Size(140, 40);
             lblUebersichtNameD.TabIndex = 121;
             lblUebersichtNameD.Text = "Name D";
+            lblUebersichtNameD.TextAlign = ContentAlignment.MiddleCenter;
             lblUebersichtNameD.MouseDoubleClick += lblUebersichtNameC_MouseDoubleClick;
             // 
             // btnUebersichtSpielen
@@ -131,23 +136,24 @@
             btnUebersichtSpielen.TabIndex = 120;
             btnUebersichtSpielen.Text = "Spielen";
             btnUebersichtSpielen.UseVisualStyleBackColor = true;
+            btnUebersichtSpielen.Click += btnUebersichtSpielen_Click;
             // 
-            // lblUebersichtFinalNameA
+            // lblUebersichtFinalNameB
             // 
-            lblUebersichtFinalNameA.AutoSize = true;
-            lblUebersichtFinalNameA.BackColor = SystemColors.ActiveCaption;
-            lblUebersichtFinalNameA.BorderStyle = BorderStyle.FixedSingle;
-            lblUebersichtFinalNameA.ForeColor = SystemColors.Control;
-            lblUebersichtFinalNameA.Location = new Point(316, 224);
-            lblUebersichtFinalNameA.Name = "lblUebersichtFinalNameA";
-            lblUebersichtFinalNameA.Padding = new Padding(20, 10, 20, 10);
-            lblUebersichtFinalNameA.Size = new Size(120, 37);
-            lblUebersichtFinalNameA.TabIndex = 119;
-            lblUebersichtFinalNameA.Text = "Final Name A";
+            lblUebersichtFinalNameB.BackColor = SystemColors.ActiveCaption;
+            lblUebersichtFinalNameB.BorderStyle = BorderStyle.FixedSingle;
+            lblUebersichtFinalNameB.ForeColor = SystemColors.Control;
+            lblUebersichtFinalNameB.Location = new Point(635, 189);
+            lblUebersichtFinalNameB.Name = "lblUebersichtFinalNameB";
+            lblUebersichtFinalNameB.Padding = new Padding(20, 10, 20, 10);
+            lblUebersichtFinalNameB.Size = new Size(140, 40);
+            lblUebersichtFinalNameB.TabIndex = 119;
+            lblUebersichtFinalNameB.Text = "Final Name B";
+            lblUebersichtFinalNameB.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnClubCancel
             // 
-            btnClubCancel.Location = new Point(376, 398);
+            btnClubCancel.Location = new Point(700, 398);
             btnClubCancel.Name = "btnClubCancel";
             btnClubCancel.Size = new Size(75, 23);
             btnClubCancel.TabIndex = 118;
@@ -174,13 +180,57 @@
             btnPlayShuffle.UseVisualStyleBackColor = true;
             btnPlayShuffle.Click += btnPlayShuffle_Click;
             // 
+            // lblUebersichtRundeCNameA
+            // 
+            lblUebersichtRundeCNameA.BackColor = SystemColors.ActiveCaption;
+            lblUebersichtRundeCNameA.BorderStyle = BorderStyle.FixedSingle;
+            lblUebersichtRundeCNameA.ForeColor = SystemColors.Control;
+            lblUebersichtRundeCNameA.Location = new Point(148, 117);
+            lblUebersichtRundeCNameA.Name = "lblUebersichtRundeCNameA";
+            lblUebersichtRundeCNameA.Padding = new Padding(20, 10, 20, 10);
+            lblUebersichtRundeCNameA.Size = new Size(140, 40);
+            lblUebersichtRundeCNameA.TabIndex = 130;
+            lblUebersichtRundeCNameA.Text = "Runde C Name A";
+            lblUebersichtRundeCNameA.TextAlign = ContentAlignment.MiddleCenter;
+            lblUebersichtRundeCNameA.MouseDoubleClick += lblUebersichtRundeCNameA_MouseDoubleClick;
+            // 
+            // lblUebersichtRundeCNameB
+            // 
+            lblUebersichtRundeCNameB.BackColor = SystemColors.ActiveCaption;
+            lblUebersichtRundeCNameB.BorderStyle = BorderStyle.FixedSingle;
+            lblUebersichtRundeCNameB.ForeColor = SystemColors.Control;
+            lblUebersichtRundeCNameB.Location = new Point(148, 277);
+            lblUebersichtRundeCNameB.Name = "lblUebersichtRundeCNameB";
+            lblUebersichtRundeCNameB.Padding = new Padding(20, 10, 20, 10);
+            lblUebersichtRundeCNameB.Size = new Size(140, 40);
+            lblUebersichtRundeCNameB.TabIndex = 129;
+            lblUebersichtRundeCNameB.Text = "Runde C Name B";
+            lblUebersichtRundeCNameB.TextAlign = ContentAlignment.MiddleCenter;
+            lblUebersichtRundeCNameB.MouseDoubleClick += lblUebersichtRundeCNameB_MouseDoubleClick;
+            // 
+            // lblUebersichtFinalNameC
+            // 
+            lblUebersichtFinalNameC.BackColor = SystemColors.ActiveCaption;
+            lblUebersichtFinalNameC.BorderStyle = BorderStyle.FixedSingle;
+            lblUebersichtFinalNameC.ForeColor = SystemColors.Control;
+            lblUebersichtFinalNameC.Location = new Point(12, 203);
+            lblUebersichtFinalNameC.Name = "lblUebersichtFinalNameC";
+            lblUebersichtFinalNameC.Padding = new Padding(20, 10, 20, 10);
+            lblUebersichtFinalNameC.Size = new Size(140, 40);
+            lblUebersichtFinalNameC.TabIndex = 131;
+            lblUebersichtFinalNameC.Text = "Final Name C";
+            lblUebersichtFinalNameC.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // frmPlayTime
             // 
             AcceptButton = btnUebersichtSpielen;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = btnClubCancel;
-            ClientSize = new Size(463, 433);
+            ClientSize = new Size(787, 433);
+            Controls.Add(lblUebersichtFinalNameC);
+            Controls.Add(lblUebersichtRundeCNameA);
+            Controls.Add(lblUebersichtRundeCNameB);
             Controls.Add(btnPlayShuffle);
             Controls.Add(label1);
             Controls.Add(lblUebersichtNameA);
@@ -190,7 +240,7 @@
             Controls.Add(lblUebersichtNameC);
             Controls.Add(lblUebersichtNameD);
             Controls.Add(btnUebersichtSpielen);
-            Controls.Add(lblUebersichtFinalNameA);
+            Controls.Add(lblUebersichtFinalNameB);
             Controls.Add(btnClubCancel);
             Name = "frmPlayTime";
             StartPosition = FormStartPosition.CenterScreen;
@@ -208,9 +258,12 @@
         private Label lblUebersichtNameC;
         private Label lblUebersichtNameD;
         private Button btnUebersichtSpielen;
-        private Label lblUebersichtFinalNameA;
+        private Label lblUebersichtFinalNameB;
         private Button btnClubCancel;
         private Label label1;
         private Button btnPlayShuffle;
+        private Label lblUebersichtRundeCNameA;
+        private Label lblUebersichtRundeCNameB;
+        private Label lblUebersichtFinalNameC;
     }
 }

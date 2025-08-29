@@ -7,6 +7,10 @@ namespace DartVerwaltung
         private Random rng = new Random();
         private List<Member> _players;
 
+        bool playedAB = false;
+        bool playedCD = false;
+        bool started = false;
+
         public frmPlayTime(List<Member> players)
         {
             if (players.Count != 4)
@@ -44,17 +48,85 @@ namespace DartVerwaltung
 
         private void lblUebersichtNameA_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            lblUebersichtRundeBNameA.Text = lblUebersichtNameA.Text;
+            if(started)
+            {
+                lblUebersichtRundeBNameA.Text = lblUebersichtNameA.Text;
+                lblUebersichtRundeCNameA.Text = lblUebersichtNameB.Text;
+                playedAB = true;
+            }
+            
         }
 
         private void lblUebersichtNameB_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            lblUebersichtRundeBNameB.Text = lblUebersichtNameB.Text;
+            if(started)
+            {
+                lblUebersichtRundeBNameA.Text = lblUebersichtNameB.Text;
+                lblUebersichtRundeCNameA.Text = lblUebersichtNameA.Text;
+                playedAB = true;
+            }
+            
         }
 
         private void lblUebersichtNameC_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if()
+            if (started && sender is Label label)
+            {
+                lblUebersichtRundeBNameB.Text = label.Text;
+
+                if (label.Name == lblUebersichtNameC.Name)
+                {
+                    lblUebersichtRundeCNameB.Text = lblUebersichtNameD.Text;
+                }
+                else if (label.Name == lblUebersichtNameD.Name)
+                {
+                    lblUebersichtRundeCNameB.Text = lblUebersichtNameC.Text;
+                }
+
+                playedCD = true;
+            }
+        }
+
+        private void lblUebersichtRundeCNameA_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (allPlayed())
+            {
+                lblUebersichtFinalNameC.Text = lblUebersichtRundeCNameA.Text;
+            }
+        }
+
+        private void lblUebersichtRundeCNameB_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (allPlayed())
+            {
+                lblUebersichtFinalNameC.Text = lblUebersichtRundeCNameB.Text;
+            }
+        }
+
+        private void lblUebersichtRundeBNameA_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (allPlayed())
+            {
+                lblUebersichtFinalNameB.Text = lblUebersichtRundeBNameA.Text;
+            }
+        }
+
+        private void lblUebersichtRundeBNameB_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (allPlayed())
+            {
+                lblUebersichtFinalNameB.Text = lblUebersichtRundeBNameB.Text;
+            }
+        }
+
+        private bool allPlayed()
+        {
+            return playedAB && playedCD;
+        }
+
+        private void btnUebersichtSpielen_Click(object sender, EventArgs e)
+        {
+            started = true;
         }
     }
 }
