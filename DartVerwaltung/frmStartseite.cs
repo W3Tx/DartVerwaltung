@@ -265,7 +265,8 @@ namespace DartVerwaltung
 
         private void btnStartseiteSpielen_Click(object sender, EventArgs e)
         {
-            frmPlayTime frmPlayTimes = new frmPlayTime();
+            var players = _playTimeBindingSource.List.Cast<Member>().ToList();
+            frmPlayTime frmPlayTimes = new frmPlayTime(players);
             frmPlayTimes.ShowDialog();
         }
 

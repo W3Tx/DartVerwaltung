@@ -38,6 +38,7 @@
             lblUebersichtFinalNameA = new Label();
             btnClubCancel = new Button();
             label1 = new Label();
+            btnPlayShuffle = new Button();
             SuspendLayout();
             // 
             // lblUebersichtNameA
@@ -46,12 +47,13 @@
             lblUebersichtNameA.BackColor = SystemColors.ActiveCaption;
             lblUebersichtNameA.BorderStyle = BorderStyle.FixedSingle;
             lblUebersichtNameA.ForeColor = SystemColors.Control;
-            lblUebersichtNameA.Location = new Point(11, 115);
+            lblUebersichtNameA.Location = new Point(11, 110);
             lblUebersichtNameA.Name = "lblUebersichtNameA";
             lblUebersichtNameA.Padding = new Padding(20, 10, 20, 10);
             lblUebersichtNameA.Size = new Size(92, 37);
             lblUebersichtNameA.TabIndex = 126;
             lblUebersichtNameA.Text = "Name A";
+            lblUebersichtNameA.MouseDoubleClick += lblUebersichtNameA_MouseDoubleClick;
             // 
             // lblUebersichtRundeBNameA
             // 
@@ -78,6 +80,7 @@
             lblUebersichtNameB.Size = new Size(91, 37);
             lblUebersichtNameB.TabIndex = 124;
             lblUebersichtNameB.Text = "Name B";
+            lblUebersichtNameB.MouseDoubleClick += lblUebersichtNameB_MouseDoubleClick;
             // 
             // lblUebersichtRundeBNameB
             // 
@@ -104,6 +107,7 @@
             lblUebersichtNameC.Size = new Size(92, 37);
             lblUebersichtNameC.TabIndex = 122;
             lblUebersichtNameC.Text = "Name C";
+            lblUebersichtNameC.MouseDoubleClick += lblUebersichtNameC_MouseDoubleClick;
             // 
             // lblUebersichtNameD
             // 
@@ -117,12 +121,13 @@
             lblUebersichtNameD.Size = new Size(92, 37);
             lblUebersichtNameD.TabIndex = 121;
             lblUebersichtNameD.Text = "Name D";
+            lblUebersichtNameD.MouseDoubleClick += lblUebersichtNameC_MouseDoubleClick;
             // 
             // btnUebersichtSpielen
             // 
-            btnUebersichtSpielen.Location = new Point(12, 398);
+            btnUebersichtSpielen.Location = new Point(93, 398);
             btnUebersichtSpielen.Name = "btnUebersichtSpielen";
-            btnUebersichtSpielen.Size = new Size(358, 23);
+            btnUebersichtSpielen.Size = new Size(277, 23);
             btnUebersichtSpielen.TabIndex = 120;
             btnUebersichtSpielen.Text = "Spielen";
             btnUebersichtSpielen.UseVisualStyleBackColor = true;
@@ -159,6 +164,16 @@
             label1.TabIndex = 127;
             label1.Text = "Turnierbaum K.O";
             // 
+            // btnPlayShuffle
+            // 
+            btnPlayShuffle.Location = new Point(12, 398);
+            btnPlayShuffle.Name = "btnPlayShuffle";
+            btnPlayShuffle.Size = new Size(75, 23);
+            btnPlayShuffle.TabIndex = 128;
+            btnPlayShuffle.Text = "Shuffle";
+            btnPlayShuffle.UseVisualStyleBackColor = true;
+            btnPlayShuffle.Click += btnPlayShuffle_Click;
+            // 
             // frmPlayTime
             // 
             AcceptButton = btnUebersichtSpielen;
@@ -166,6 +181,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = btnClubCancel;
             ClientSize = new Size(463, 433);
+            Controls.Add(btnPlayShuffle);
             Controls.Add(label1);
             Controls.Add(lblUebersichtNameA);
             Controls.Add(lblUebersichtRundeBNameA);
@@ -195,5 +211,6 @@
         private Label lblUebersichtFinalNameA;
         private Button btnClubCancel;
         private Label label1;
+        private Button btnPlayShuffle;
     }
 }

@@ -291,7 +291,7 @@
             // 
             txtStartseiteMitgliederID.Location = new Point(98, 117);
             txtStartseiteMitgliederID.Name = "txtStartseiteMitgliederID";
-            txtStartseiteMitgliederID.PlaceholderText = "Mitglieder Nr";
+            txtStartseiteMitgliederID.PlaceholderText = "Nr";
             txtStartseiteMitgliederID.Size = new Size(116, 23);
             txtStartseiteMitgliederID.TabIndex = 1;
             txtStartseiteMitgliederID.TextChanged += filterInput_Changed;
